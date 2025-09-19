@@ -30,20 +30,21 @@
     "tag": "latest"
   },
   "files": [
-    "dist/**/*",
+    "lib/**/*",
     "tailwind.config.js"
   ],
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/cjs/types/index.d.ts",
-        "default": "./dist/cjs/index.js"
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.js"
       },
       "require": {
-        "types": "./dist/cjs/types/index.d.ts",
-        "default": "./dist/cjs/index.js"
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.cjs"
       }
-    }
+    },
+    "./tailwind-config": "./tailwind.config.js"
   },
   "dependencies": {
     "react": "^19.1.1",
