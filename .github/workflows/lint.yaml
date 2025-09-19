@@ -1,8 +1,10 @@
 name: Lint
 
 on:
-  pull_request:
-  push:
+  workflow_run:
+    workflows: ["Setup Dependencies"]
+    types:
+      - completed
 
 jobs:
   lint:
@@ -16,6 +18,17 @@ jobs:
           node-version: 24
           cache: npm
 
-      - run: npm ci
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: deps-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
-      - run: npm run lint
+      - name: Install dependencies if cache missed
+        run: |
+          if [ ! -d node_modules ]; then
+            npm install
+          fi
+
+      - name: Run linter
+        run: npm run lint
