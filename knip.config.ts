@@ -6,10 +6,8 @@ const config: KnipConfig = {
   ignoreDependencies: [
     'tailwindcss', // Ignore tailwindcss because knip doesn't recognize v4 yet
     '@semantic-release/commit-analyzer',
-    '@semantic-release/changelog',
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm',
-    '@semantic-release/git',
     '@semantic-release/github',
   ],
 };
