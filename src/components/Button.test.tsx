@@ -9,20 +9,26 @@ describe('Button component', () => {
     expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
   });
 
-  it('applies primary Tailwind classes when primary is true', () => {
-    render(<Button label="Primary" primary />);
+  it('applies primary Tailwind classes by default', () => {
+    render(<Button label="Primary" />);
     const button = screen.getByRole('button', { name: /primary/i });
     expect(button.className).toContain('bg-blue-600');
     expect(button.className).toContain('text-white');
-    expect(button.className).not.toContain('bg-gray-200');
   });
 
-  it('applies secondary Tailwind classes when primary is false', () => {
-    render(<Button label="Secondary" />);
+  it('applies secondary Tailwind classes when variant="secondary"', () => {
+    render(<Button label="Secondary" variant="secondary" />);
     const button = screen.getByRole('button', { name: /secondary/i });
-    expect(button.className).toContain('bg-gray-200');
-    expect(button.className).toContain('text-gray-800');
+    expect(button.className).toContain('bg-gray-600');
+    expect(button.className).toContain('text-white');
     expect(button.className).not.toContain('bg-blue-600');
+  });
+
+  it('applies tertiary Tailwind classes when variant="tertiary"', () => {
+    render(<Button label="Tertiary" variant="tertiary" />);
+    const button = screen.getByRole('button', { name: /tertiary/i });
+    expect(button.className).toContain('bg-transparent');
+    expect(button.className).toContain('text-blue-600');
   });
 
   it('applies correct size classes', () => {
@@ -33,10 +39,29 @@ describe('Button component', () => {
     expect(button.className).toContain('text-lg');
   });
 
-  it('applies backgroundColor style when provided', () => {
-    render(<Button label="Styled" backgroundColor="#FFFFFF" />);
-    const button = screen.getByRole('button', { name: /styled/i });
-    expect(button).toHaveStyle({ backgroundColor: '#FFFFFF' });
+  it('renders icon on the left when iconPosition="left"', () => {
+    render(<Button label="Icon Left" icon={<span data-testid="icon">★</span>} iconPosition="left" />);
+    const button = screen.getByRole('button', { name: /icon left/i });
+    expect(button.querySelector('[data-testid="icon"]')).toBeInTheDocument();
+  });
+
+  it('renders icon on the right when iconPosition="right"', () => {
+    render(<Button label="Icon Right" icon={<span data-testid="icon">★</span>} iconPosition="right" />);
+    const button = screen.getByRole('button', { name: /icon right/i });
+    expect(button.querySelector('[data-testid="icon"]')).toBeInTheDocument();
+  });
+
+  it('applies fullWidth class when fullWidth=true', () => {
+    render(<Button label="Full Width" fullWidth />);
+    const button = screen.getByRole('button', { name: /full width/i });
+    expect(button.className).toContain('w-full');
+  });
+
+  it('is disabled when disabled=true', () => {
+    render(<Button label="Disabled" disabled />);
+    const button = screen.getByRole('button', { name: /disabled/i });
+    expect(button).toBeDisabled();
+    expect(button).toHaveAttribute('aria-disabled', 'true');
   });
 
   it('calls onClick when clicked', () => {
