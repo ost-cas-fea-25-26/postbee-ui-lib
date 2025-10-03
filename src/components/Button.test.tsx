@@ -12,7 +12,7 @@ describe('Button component', () => {
   it('applies primary Tailwind classes by default', () => {
     render(<Button label="Primary" />);
     const button = screen.getByRole('button', { name: /primary/i });
-    expect(button.className).toContain('bg-blue-600');
+    expect(button.className).toContain('bg-violet-600');
     expect(button.className).toContain('text-white');
   });
 
@@ -21,14 +21,14 @@ describe('Button component', () => {
     const button = screen.getByRole('button', { name: /secondary/i });
     expect(button.className).toContain('bg-gray-600');
     expect(button.className).toContain('text-white');
-    expect(button.className).not.toContain('bg-blue-600');
+    expect(button.className).not.toContain('bg-violet-600');
   });
 
   it('applies tertiary Tailwind classes when variant="tertiary"', () => {
     render(<Button label="Tertiary" variant="tertiary" />);
     const button = screen.getByRole('button', { name: /tertiary/i });
     expect(button.className).toContain('bg-transparent');
-    expect(button.className).toContain('text-blue-600');
+    expect(button.className).toContain('text-violet-600');
   });
 
   it('applies correct size classes', () => {
