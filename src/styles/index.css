@@ -1,1 +1,5 @@
-@import "./tailwind.css";
+@import "./base.css";
+@import "./theme-colors.css";
+@import "./theme-typography.css";
+@import "./theme-spacing.css";
+@import "./components.css";

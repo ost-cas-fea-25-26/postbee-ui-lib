@@ -1,0 +1,70 @@
+@layer components {
+  .pb-h1 {
+    color: var(--color-base);
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-125);
+  }
+  .pb-h2 {
+    color: var(--color-base);
+    font-size: var(--text-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-125);
+  }
+  .pb-h3 {
+    color: var(--color-base);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-125);
+  }
+  .pb-h4 {
+    color: var(--color-base);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-125);
+  }
+
+  .pb-paragraph-m {
+    color: var(--color-base);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-140);
+  }
+  .pb-paragraph-l {
+    color: var(--color-base);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-145);
+  }
+  .pb-placeholder {
+    color: var(--color-slate-300);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-140);
+  }
+
+  .pb-label-s {
+    color: var(--color-base);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-100);
+  }
+  .pb-label-m {
+    color: var(--color-base);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-100);
+  }
+  .pb-label-l {
+    color: var(--color-base);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-100);
+  }
+  .pb-label-xl {
+    color: var(--color-base);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-100);
+  }
+}
