@@ -28,7 +28,7 @@ describe('Button component', () => {
     render(<Button label="Tertiary" variant="tertiary" />);
     const button = screen.getByRole('button', { name: /tertiary/i });
     expect(button.className).toContain('bg-transparent');
-    expect(button.className).toContain('text-violet-600');
+    expect(button.className).toContain('text-blue-600');
   });
 
   it('applies correct size classes', () => {
