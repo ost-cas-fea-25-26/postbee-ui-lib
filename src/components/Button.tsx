@@ -1,36 +1,59 @@
-interface ButtonProps {
-  /** Is this the principal call to action on the page? */
-  primary?: boolean;
-  /** Optional custom background color */
-  backgroundColor?: string;
-  /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
-  /** Button contents */
-  label: string;
-  /** Optional click handler */
-  onClick?: () => void;
+import React from 'react';
+import clsx from 'clsx';
+
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
+export type ButtonSize = 'small' | 'medium' | 'large';
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  fullWidth?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  label?: string;
 }
 
-/** Primary UI component for user interaction */
-export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
-  // Tailwind size classes
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  size = 'medium',
+  fullWidth = false,
+  disabled = false,
+  icon,
+  iconPosition = 'left',
+  label,
+  className,
+  ...props
+}) => {
+  const variantClasses = {
+    primary: 'bg-blue-600 text-white font-bold hover:bg-blue-800 focus:ring-blue-600',
+    secondary: 'bg-gray-600 text-white font-semibold hover:bg-gray-700 focus:ring-gray-600',
+    tertiary: 'bg-transparent text-blue-600 underline hover:no-underline hover:text-blue-800 focus:ring-blue-600',
+  };
+
   const sizeClasses = {
     small: 'px-3 py-1 text-sm',
     medium: 'px-4 py-2 text-base',
     large: 'px-6 py-3 text-lg',
   };
 
-  // Tailwind primary / secondary classes
-  const modeClasses = primary ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-200 text-gray-800 hover:bg-gray-300';
-
   return (
     <button
       type="button"
-      className={`${sizeClasses[size]} ${modeClasses} rounded-md font-semibold transition-colors duration-200`}
-      style={backgroundColor ? { backgroundColor } : undefined}
+      disabled={disabled}
+      aria-disabled={disabled}
+      className={clsx(
+        'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        variantClasses[variant],
+        sizeClasses[size],
+        fullWidth && 'w-full',
+        className,
+      )}
       {...props}
     >
-      {label}
+      {icon && iconPosition === 'left' && <span className="mr-2 flex items-center">{icon}</span>}
+      {label ? label : children}
+      {icon && iconPosition === 'right' && <span className="ml-2 flex items-center">{icon}</span>}
     </button>
   );
 };
