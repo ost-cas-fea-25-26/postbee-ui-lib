@@ -26,15 +26,17 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const variantClasses = {
-    primary: 'bg-violet-600 text-white font-bold hover:bg-violet-800 focus:ring-blue-600',
-    secondary: 'bg-gray-600 text-white font-semibold hover:bg-gray-700 focus:ring-gray-600',
-    tertiary: 'bg-transparent text-blue-600 underline hover:no-underline hover:text-blue-800 focus:ring-blue-600',
+    primary:
+      'bg-primary text-primary-foreground outline-3 hover:bg-primary-hover hover:outline-primary-hover-outline active:bg-primary-active active:outline-primary-active-outline',
+    secondary:
+      'bg-secondary text-secondary-foreground outline-3 hover:bg-secondary-hover hover:outline-secondary-hover-outline active: bg-secondary-active active:outline-secondary-active-outline',
+    tertiary: 'bg-transparent underline hover:no-underline',
   };
 
   const sizeClasses = {
-    small: 'px-3 py-1 text-sm',
-    medium: 'px-4 py-2 text-base',
-    large: 'px-6 py-3 text-lg',
+    small: 'py-xs px-[12px] text-sm',
+    medium: 'p-[12px] text-md',
+    large: 'px-md py-sm text-md',
   };
 
   return (
@@ -43,7 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       aria-disabled={disabled}
       className={clsx(
-        'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex cursor-pointer items-center justify-center rounded-md font-semibold leading-none transition-colors disabled:pointer-events-none disabled:opacity-50',
         variantClasses[variant],
         sizeClasses[size],
         fullWidth && 'w-full',
