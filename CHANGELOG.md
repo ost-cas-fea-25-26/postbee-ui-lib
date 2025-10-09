@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.0.0...v1.1.0) (2025-10-09)
+
+
+### Features
+
+* add theme configuration with design tokens ([f39a5ad](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/f39a5ad0e45ec14acfd21916a027309a63912a3f))
+
 # 1.0.0 (2025-10-03)
 
 
