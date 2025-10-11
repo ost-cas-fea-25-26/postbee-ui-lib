@@ -1,73 +1,134 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 import { Button } from './Button';
 
-describe('Button component', () => {
-  it('renders the button with provided label', () => {
-    render(<Button label="Click me" />);
-    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
+describe('Button Component', () => {
+  it('should render correctly with default props', () => {
+    render(<Button>Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent('Click Me');
+    expect(button).not.toBeDisabled();
   });
 
-  it('applies primary Tailwind classes by default', () => {
-    render(<Button label="Primary" />);
-    const button = screen.getByRole('button', { name: /primary/i });
-    expect(button.className).toContain('bg-violet-600');
-    expect(button.className).toContain('text-white');
+  it('should apply the correct classes for "primary" variant', () => {
+    render(<Button variant="primary">Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('bg-primary');
+    expect(button).toHaveClass('text-primary-foreground');
   });
 
-  it('applies secondary Tailwind classes when variant="secondary"', () => {
-    render(<Button label="Secondary" variant="secondary" />);
-    const button = screen.getByRole('button', { name: /secondary/i });
-    expect(button.className).toContain('bg-gray-600');
-    expect(button.className).toContain('text-white');
-    expect(button.className).not.toContain('bg-violet-600');
+  it('should apply the correct classes for "secondary" variant', () => {
+    render(<Button variant="secondary">Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('bg-secondary');
+    expect(button).toHaveClass('text-secondary-foreground');
   });
 
-  it('applies tertiary Tailwind classes when variant="tertiary"', () => {
-    render(<Button label="Tertiary" variant="tertiary" />);
-    const button = screen.getByRole('button', { name: /tertiary/i });
-    expect(button.className).toContain('bg-transparent');
-    expect(button.className).toContain('text-blue-600');
+  it('should apply the correct classes for "tertiary" variant', () => {
+    render(<Button variant="tertiary">Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('bg-gradient-to-r');
+    expect(button).toHaveClass('from-tertiary');
   });
 
-  it('applies correct size classes', () => {
-    render(<Button label="Large" size="large" />);
-    const button = screen.getByRole('button', { name: /large/i });
-    expect(button.className).toContain('px-6');
-    expect(button.className).toContain('py-3');
-    expect(button.className).toContain('text-lg');
+  it('should apply the correct size classes', () => {
+    render(<Button size="small">Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('text-sm', 'px-[12px]');
+
+    cleanup();
+
+    render(<Button size="medium">Click Me</Button>);
+    expect(screen.getByRole('button')).toHaveClass('p-[12px]');
+
+    cleanup();
+
+    render(<Button size="large">Click Me</Button>);
+    expect(screen.getByRole('button')).toHaveClass('px-md');
   });
 
-  it('renders icon on the left when iconPosition="left"', () => {
-    render(<Button label="Icon Left" icon={<span data-testid="icon">★</span>} iconPosition="left" />);
-    const button = screen.getByRole('button', { name: /icon left/i });
-    expect(button.querySelector('[data-testid="icon"]')).toBeInTheDocument();
+  it('should apply full width if fullWidth is true', () => {
+    render(<Button fullWidth>Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('w-full');
   });
 
-  it('renders icon on the right when iconPosition="right"', () => {
-    render(<Button label="Icon Right" icon={<span data-testid="icon">★</span>} iconPosition="right" />);
-    const button = screen.getByRole('button', { name: /icon right/i });
-    expect(button.querySelector('[data-testid="icon"]')).toBeInTheDocument();
+  it('should render an icon on the left side when iconPosition is "left"', () => {
+    const icon = <svg data-testid="icon" />;
+    render(
+      <Button icon={icon} iconPosition="left">
+        Click Me
+      </Button>,
+    );
+
+    const iconElement = screen.getByTestId('icon');
+    expect(iconElement).toBeInTheDocument();
+    const button = screen.getByRole('button');
+    expect(button).toContainElement(iconElement);
   });
 
-  it('applies fullWidth class when fullWidth=true', () => {
-    render(<Button label="Full Width" fullWidth />);
-    const button = screen.getByRole('button', { name: /full width/i });
-    expect(button.className).toContain('w-full');
+  it('should render an icon on the right side when iconPosition is "right"', () => {
+    const icon = <svg data-testid="icon" />;
+    render(
+      <Button icon={icon} iconPosition="right">
+        Click Me
+      </Button>,
+    );
+
+    const iconElement = screen.getByTestId('icon');
+    expect(iconElement).toBeInTheDocument();
+    const button = screen.getByRole('button');
+    expect(button).toContainElement(iconElement);
   });
 
-  it('is disabled when disabled=true', () => {
-    render(<Button label="Disabled" disabled />);
-    const button = screen.getByRole('button', { name: /disabled/i });
+  it('should disable the button when disabled prop is passed', () => {
+    render(<Button disabled>Click Me</Button>);
+
+    const button = screen.getByRole('button');
     expect(button).toBeDisabled();
-    expect(button).toHaveAttribute('aria-disabled', 'true');
   });
 
-  it('calls onClick when clicked', () => {
+  it('should call the onClick handler when clicked', () => {
     const handleClick = vi.fn();
-    render(<Button label="Click me" onClick={handleClick} />);
-    fireEvent.click(screen.getByRole('button', { name: /click me/i }));
+    render(<Button onClick={handleClick}>Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
     expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not call the onClick handler when the button is disabled', () => {
+    const handleClick = vi.fn();
+    render(
+      <Button onClick={handleClick} disabled>
+        Click Me
+      </Button>,
+    );
+
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+
+  it('should render the label if provided', () => {
+    render(<Button label="My Label" />);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveTextContent('My Label');
+  });
+
+  it('should render children if label is not provided', () => {
+    render(<Button>Click Me</Button>);
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveTextContent('Click Me');
   });
 });
