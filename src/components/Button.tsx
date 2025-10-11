@@ -29,8 +29,9 @@ export const Button: React.FC<ButtonProps> = ({
     primary:
       'bg-primary text-primary-foreground outline-3 hover:bg-primary-hover hover:outline-primary-hover-outline active:bg-primary-active active:outline-primary-active-outline',
     secondary:
-      'bg-secondary text-secondary-foreground outline-3 hover:bg-secondary-hover hover:outline-secondary-hover-outline active: bg-secondary-active active:outline-secondary-active-outline',
-    tertiary: 'bg-transparent underline hover:no-underline',
+      'bg-secondary text-secondary-foreground outline-3 hover:bg-secondary-hover hover:outline-secondary-hover-outline active:bg-secondary-active active:outline-secondary-active-outline',
+    tertiary:
+      'bg-gradient-to-r from-tertiary to-primary text-tertiary-foreground outline-3 hover:bg-tertiary-hover hover:to-70% hover:outline-tertiary-hover-outline active:bg-tertiary-active active:outline-tertiary-active-outline active:to-50%',
   };
 
   const sizeClasses = {

@@ -53,4 +53,11 @@
   --color-secondary-hover-outline: var(--color-slate-100);
   --color-secondary-active: var(--color-slate-700);
   --color-secondary-active-outline: var(--color-slate-200);
+
+  --color-tertiary: var(--color-pink-500);
+  --color-tertiary-foreground: var(--color-white);
+  --color-tertiary-hover: var(--color-pink-500);
+  --color-tertiary-hover-outline: var(--color-slate-100);
+  --color-tertiary-active: var(--color-pink-500);
+  --color-tertiary-active-outline: var(--color-slate-200);
 }
