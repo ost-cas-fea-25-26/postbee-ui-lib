@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.1.0...v1.2.0) (2025-10-13)
+
+
+### Features
+
+* finalize button ([#2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/2)) ([4e4b18f](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/4e4b18fd025a4de0f1a1b69287bc529c52289908))
+
 # [1.1.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.0.0...v1.1.0) (2025-10-09)
 
 
