@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import { Button } from '.';
+import { Button } from './Button';
 
 describe('Button Component', () => {
   it('should render correctly with default props', () => {
