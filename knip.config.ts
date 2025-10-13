@@ -4,7 +4,7 @@ const config: KnipConfig = {
   entry: ['src/index.ts'],
   ignore: ['.prettier.config.js', '.storybook/**', 'storybook-static/**', 'release.config.js'],
   ignoreDependencies: [
-    'tailwindcss', // Ignore tailwindcss because knip doesn't recognize v4 yet
+    '@fontsource/poppins',
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm',
