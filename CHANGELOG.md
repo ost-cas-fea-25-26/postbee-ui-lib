@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.2.0...v1.2.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* **colors:** use primary, secondary, tertiary for all colors for better interchangeability ([#4](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/4)) ([1cde738](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/1cde73867001a0063150f4b1194c6cb5c27b748e))
+
 # [1.2.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.1.0...v1.2.0) (2025-10-13)
 
 
