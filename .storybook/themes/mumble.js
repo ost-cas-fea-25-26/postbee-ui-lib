@@ -1,5 +1,5 @@
-import { create } from 'storybook/theming/create'
-import { version } from '../../package.json'
+import { create } from 'storybook/theming/create';
+import { version } from '../../package.json';
 
 export default create({
   base: 'light',
@@ -14,4 +14,4 @@ export default create({
 
   // Colors
   colorPrimary: '#7C3AED',
-})
+});
