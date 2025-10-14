@@ -20,4 +20,8 @@ const preview: Preview = {
   },
 };
 
+export const parameters = {
+  layout: 'centered',
+};
+
 export default preview;
