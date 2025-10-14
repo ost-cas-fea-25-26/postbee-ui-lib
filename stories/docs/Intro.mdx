@@ -1,0 +1,25 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import pkg from '../../package.json';
+
+<Meta title="Docs/Intro" />
+
+# 🛠️ Intro
+
+## Install latest version
+
+<Source language="shell" code={`npm install ${pkg.name}`} />
+
+## Install specific version
+
+<Source language="shell" code={`npm install ${pkg.name}@${pkg.version}`} />
+
+<Source
+  language="json"
+  format={true}
+  code={`
+  "dependencies": {
+      //...
+      ${pkg.name}: "${pkg.version}"
+      //...
+  }`}
+/>
