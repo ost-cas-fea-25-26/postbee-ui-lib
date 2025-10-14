@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.2.1...v1.3.0) (2025-10-14)
+
+
+### Features
+
+* **typography:** add typography components ([#3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/3)) ([d49fe1f](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/d49fe1fbcf2cfe358772e3f08c6b5a14aef2bb39))
+
 ## [1.2.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.2.0...v1.2.1) (2025-10-14)
 
 
