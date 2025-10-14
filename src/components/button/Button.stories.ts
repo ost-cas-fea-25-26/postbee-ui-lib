@@ -11,6 +11,10 @@ const meta: Meta<typeof Button> = {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/nsXR2h0KwciWpuwKRD58FX/Mumble?node-id=404-10&t=cunwm1yb3j7KAYAN-0",
+    },
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
