@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const textStyles = [
@@ -30,19 +29,17 @@ type Story = StoryObj;
 
 export const All: Story = {
   render: () => (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 p-8 ">
-      <h1 className="text-2xl font-bold mb-8 text-gray-900 dark:text-gray-100">
-        Typography Tokens
-      </h1>
+    <div className="min-h-screen bg-white p-8">
+      <h1 className="mb-8 text-2xl font-bold text-gray-900">Typography Tokens</h1>
 
       <div className="grid gap-8 text-base">
         {textStyles.map(({ class: className, label }) => (
           <div
             key={className}
-            className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 dark:border-gray-800 pb-4"
+            className="flex flex-col border-b border-gray-200 pb-4 sm:flex-row sm:items-center sm:justify-between"
           >
             <div className={className}>{label}</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">
+            <div className="mt-2 text-sm text-gray-500 sm:mt-0">
               <code>{className}</code>
             </div>
           </div>
