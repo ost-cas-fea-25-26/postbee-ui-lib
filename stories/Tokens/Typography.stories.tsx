@@ -30,16 +30,16 @@ type Story = StoryObj;
 export const All: Story = {
   render: () => (
     <div className="min-h-screen bg-white p-8">
-      <h1 className="mb-8 text-2xl font-bold text-gray-900">Typography Tokens</h1>
+      <h1 className="text-secondary-900 mb-8 text-2xl font-bold">Typography Tokens</h1>
 
       <div className="grid gap-8 text-base">
         {textStyles.map(({ class: className, label }) => (
           <div
             key={className}
-            className="flex flex-col border-b border-gray-200 pb-4 sm:flex-row sm:items-center sm:justify-between"
+            className="border-secondary-200 flex flex-col border-b pb-4 sm:flex-row sm:items-center sm:justify-between"
           >
             <div className={className}>{label}</div>
-            <div className="mt-2 text-sm text-gray-500 sm:mt-0">
+            <div className="text-secondary-500 mt-2 text-sm sm:mt-0">
               <code>{className}</code>
             </div>
           </div>
