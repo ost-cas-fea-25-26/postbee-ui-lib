@@ -2,10 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Label } from './Label';
 
 const meta = {
-  title: 'Example/Typography/Label',
+  title: 'Components/Typography/Label',
   component: Label,
   parameters: {
     layout: 'centered',
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/nsXR2h0KwciWpuwKRD58FX/Mumble?node-id=407-112&t=cunwm1yb3j7KAYAN-4',
+    },
   },
   tags: ['autodocs'],
   argTypes: {},
