@@ -1,41 +1,68 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-const colorGroups = {
-  primary: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
-  secondary: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
-  tertiary: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
-};
+const colors = [
+  // primary shades
+  'bg-primary-50',
+  'bg-primary-100',
+  'bg-primary-200',
+  'bg-primary-300',
+  'bg-primary-400',
+  'bg-primary-500',
+  'bg-primary-600',
+  'bg-primary-700',
+  'bg-primary-800',
+  'bg-primary-900',
+  'bg-primary-950',
+  // secondary shades
+  'bg-secondary-50',
+  'bg-secondary-100',
+  'bg-secondary-200',
+  'bg-secondary-300',
+  'bg-secondary-400',
+  'bg-secondary-500',
+  'bg-secondary-600',
+  'bg-secondary-700',
+  'bg-secondary-800',
+  'bg-secondary-900',
+  'bg-secondary-950',
+  // tertiary shades
+  'bg-tertiary-50',
+  'bg-tertiary-100',
+  'bg-tertiary-200',
+  'bg-tertiary-300',
+  'bg-tertiary-400',
+  'bg-tertiary-500',
+  'bg-tertiary-600',
+  'bg-tertiary-700',
+  'bg-tertiary-800',
+  'bg-tertiary-900',
+  'bg-tertiary-950',
+];
 
-// Helper to calculate if text should be white or black based on L* value
-const getContrastText = (colorVar: string) => {
-  // For simplicity, we assume primary shades >= 500 are dark
-  return colorVar.includes('-50') || colorVar.includes('-100') || colorVar.includes('-200') ? 'black' : 'white';
-};
-
-const ColorSwatch = ({ name, shade }: { name: string; shade: number }) => {
-  const colorVar = `--color-${name}-${shade}`;
-  const textColor = getContrastText(colorVar);
+const ColorSwatch = ({ color }: { color: string }) => {
+  // Determine contrast text
+  const isLight = color.endsWith('-50') || color.endsWith('-100') || color.endsWith('-200');
+  const textColor = isLight ? 'text-black' : 'text-white';
 
   return (
     <div className="flex flex-col items-center">
       <div
-        className="p-sm my-xs h-20 w-28 rounded-lg border border-black/10 shadow-md transition-transform hover:scale-105"
-        style={{ backgroundColor: `var(${colorVar})` }}
+        className={`p-sm my-xs hover:scale-105" h-20 w-28 rounded-lg border border-black/10 shadow-md transition-transform ${color}`}
       >
         <div className="mt-2 text-sm font-semibold" style={{ color: textColor }}>
-          {name}-{shade}
+          {color}
         </div>
       </div>
     </div>
   );
 };
 
-const ColorSection = ({ name }: { name: keyof typeof colorGroups }) => (
+const ColorSection = ({ group, groupColors }: { group: string; groupColors: string[] }) => (
   <div>
-    <h2 className="mb-4 border-b border-gray-200 pb-2 text-2xl font-bold capitalize">{name}</h2>
+    <h2 className="mb-4 border-b border-gray-200 pb-2 text-2xl font-bold capitalize">{group}</h2>
     <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
-      {colorGroups[name].map((shade) => (
-        <ColorSwatch key={shade} name={name} shade={shade} />
+      {groupColors.map((color) => (
+        <ColorSwatch key={color} color={color} />
       ))}
     </div>
   </div>
@@ -57,9 +84,9 @@ type Story = StoryObj<typeof meta>;
 export const All: Story = {
   render: () => (
     <div className="min-h-screen space-y-16 bg-white p-8 font-sans">
-      <ColorSection name="primary" />
-      <ColorSection name="secondary" />
-      <ColorSection name="tertiary" />
+      <ColorSection group="primary" groupColors={colors.filter((c) => c.startsWith('bg-primary'))} />
+      <ColorSection group="secondary" groupColors={colors.filter((c) => c.startsWith('bg-secondary'))} />
+      <ColorSection group="tertiary" groupColors={colors.filter((c) => c.startsWith('bg-tertiary'))} />
     </div>
   ),
 };
