@@ -49,9 +49,7 @@ const ColorSwatch = ({ color }: { color: string }) => {
       <div
         className={`p-sm my-xs hover:scale-105" h-20 w-28 rounded-lg border border-black/10 shadow-md transition-transform ${color}`}
       >
-        <div className="mt-2 text-sm font-semibold" style={{ color: textColor }}>
-          {color}
-        </div>
+        <div className={`mt-2 text-sm font-semibold ${textColor}`}>{color}</div>
       </div>
     </div>
   );
