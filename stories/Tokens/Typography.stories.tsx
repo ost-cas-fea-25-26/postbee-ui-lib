@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const textStyles = [
   { class: 'pb-h1', label: 'Heading 1' },
