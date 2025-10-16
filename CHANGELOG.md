@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.3.0...v1.3.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **knip:** fix imports and exports that have been noticed by knip ([#6](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/6)) ([54e6038](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/54e6038b835ef067bab6d61f51e64ada9098d551))
+
 # [1.3.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.2.1...v1.3.0) (2025-10-14)
 
 
