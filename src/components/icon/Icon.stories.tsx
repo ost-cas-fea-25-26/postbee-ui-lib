@@ -20,11 +20,15 @@ const meta = {
     size: {
       control: {
         type: 'range',
-        min: 16,
+        min: 8,
         max: 64,
       },
       description: 'Icon size',
     },
+  },
+  args: {
+    icon: 'arrow-down', // set as default, just to satisfy the type
+    size: 16,
   },
 } satisfies Meta<typeof Icon>;
 
@@ -34,8 +38,7 @@ type Story = StoryObj<typeof meta>;
 
 const ICON_NAMES = Object.keys(ICON_COMPONENTS) as IconName[];
 
-// TS: use Partial here so that we don't need to provide args
-export const Icons: Partial<Story> = {
+export const Icons: Story = {
   render: (args) => (
     <div className="gap-lg grid grid-cols-4">
       {ICON_NAMES.map((iconName) => (
