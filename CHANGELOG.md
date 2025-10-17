@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.3.1...v1.4.0) (2025-10-17)
+
+
+### Features
+
+* add Icon component ([#7](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/7)) ([9c28ce8](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/9c28ce8f49493dae8a7bca0cbbfe79ea00070237))
+
 ## [1.3.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.3.0...v1.3.1) (2025-10-16)
 
 
