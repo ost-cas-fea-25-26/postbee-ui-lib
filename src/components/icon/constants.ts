@@ -56,4 +56,5 @@ export const COLOR_CLASS_NAMES = {
   secondary: 'text-secondary',
   tertiary: 'text-tertiary',
   white: 'text-white',
+  error: 'text-error',
 };

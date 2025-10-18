@@ -1,4 +1,5 @@
 @theme {
+  --spacing: 0.25rem;
   --spacing-xxs: 0.25rem; /* 4px */
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 1rem; /* 16px */
