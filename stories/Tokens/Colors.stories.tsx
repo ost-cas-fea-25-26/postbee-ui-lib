@@ -47,7 +47,7 @@ const ColorSwatch = ({ color }: { color: string }) => {
   return (
     <div className="flex flex-col items-center">
       <div
-        className={`p-sm my-xs hover:scale-105" h-20 w-28 rounded-lg border border-black/10 shadow-md transition-transform ${color}`}
+        className={`p-sm my-xs hover:scale-105" rounded-lg border border-black/10 shadow-md transition-transform ${color}`}
       >
         <div className={`mt-2 text-sm font-semibold ${textColor}`}>{color}</div>
       </div>
@@ -58,7 +58,7 @@ const ColorSwatch = ({ color }: { color: string }) => {
 const ColorSection = ({ group, groupColors }: { group: string; groupColors: string[] }) => (
   <div>
     <h2 className="border-secondary-200 mb-4 border-b pb-2 text-2xl font-bold capitalize">{group}</h2>
-    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
       {groupColors.map((color) => (
         <ColorSwatch key={color} color={color} />
       ))}

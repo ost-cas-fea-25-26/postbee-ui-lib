@@ -32,7 +32,7 @@ export const All: Story = {
     <div className="min-h-screen bg-white p-8">
       <h1 className="text-secondary-900 mb-8 text-2xl font-bold">Typography Tokens</h1>
 
-      <div className="grid gap-8 text-base">
+      <div className="grid gap-4 text-base">
         {textStyles.map(({ class: className, label }) => (
           <div
             key={className}
