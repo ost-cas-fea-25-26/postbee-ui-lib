@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.4.0...v1.4.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* **icon:** add accessibility options ([#10](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/10)) ([89f897d](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/89f897dd1049ffbb77533f476c06bbe09291c7d5))
+
 # [1.4.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.3.1...v1.4.0) (2025-10-17)
 
 
