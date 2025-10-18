@@ -36,7 +36,8 @@
     font-weight: var(--font-weight-medium);
     line-height: var(--leading-lg);
   }
-  .pb-placeholder {
+
+  .pb-placeholder::placeholder {
     color: var(--color-secondary-300);
     font-size: var(--text-md);
     font-weight: var(--font-weight-medium);
