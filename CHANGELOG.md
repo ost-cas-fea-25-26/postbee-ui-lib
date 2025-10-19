@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.5.0...v1.6.0) (2025-10-19)
+
+
+### Features
+
+* add input component ([#9](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/9)) ([0ea404c](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/0ea404c245e58c043a796d7160218f1a86dbf6a0))
+
 # [1.5.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.4.1...v1.5.0) (2025-10-19)
 
 
