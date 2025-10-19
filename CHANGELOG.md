@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.4.1...v1.5.0) (2025-10-19)
+
+
+### Features
+
+* **icons:** add tests ([#12](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/12)) ([e6f6f2c](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/e6f6f2c5871fb68eb27077951a08cd9a1adad642))
+
 ## [1.4.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.4.0...v1.4.1) (2025-10-18)
 
 
