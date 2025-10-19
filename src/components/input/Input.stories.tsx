@@ -55,13 +55,27 @@ export const InputWithIcon: Story = {
 
 export const InputWithClickableIcon: Story = {
   args: {
-    name: 'Default',
+    name: 'ClickableIcon',
     label: 'Label',
     placeholder: 'Enter text',
     appendInnerIcon: 'mumble',
-    onAppendInnerIconClick: () => {
-      alert('Icon click');
-    },
+  },
+  render: (args) => {
+    const [message, setMessage] = useState('');
+
+    const handleClick = () => {
+      setMessage('Icon clicked');
+      setTimeout(() => {
+        setMessage('');
+      }, 1000);
+    };
+
+    return (
+      <div className="relative">
+        <Input {...args} onAppendInnerIconClick={handleClick} />
+        {message && <div className="absolute mt-2 text-base text-xs">{message}</div>}
+      </div>
+    );
   },
 };
 
