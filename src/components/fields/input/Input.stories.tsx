@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { userEvent, within, expect } from 'storybook/test';
 
 const meta = {
-  title: 'Components/Input',
+  title: 'Components/Fields/Input',
   component: Input,
   parameters: {
     layout: 'centered',

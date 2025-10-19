@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
-import { Label } from '../typography';
-import { Icon, type IconName } from '../icon';
+import { Label } from '../../typography';
+import { Icon, type IconName } from '../../icon';
 import clsx from 'clsx';
 
 interface InputProps extends React.ComponentProps<'input'> {

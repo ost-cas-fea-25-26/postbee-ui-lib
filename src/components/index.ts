@@ -1,4 +1,4 @@
 export * from './button';
 export * from './typography';
 export * from './icon';
-export * from './input';
+export * from './fields';
