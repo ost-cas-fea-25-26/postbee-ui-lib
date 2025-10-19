@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Input } from './Input';
 import { useState } from 'react';
+import { userEvent, within, expect } from 'storybook/test';
 
 const meta = {
   title: 'Components/Input',
@@ -33,23 +34,44 @@ export const InputDefault: Story = {
     label: 'Label',
     placeholder: 'Enter text',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByPlaceholderText('Enter text');
+
+    // Type something
+    await userEvent.type(input, 'Hello Mumble!');
+
+    // Assert that it worked
+    await expect(input).toHaveValue('Hello Mumble!');
+  },
 };
 
 export const InputError: Story = {
   args: {
-    name: 'Default',
+    name: 'Error',
     label: 'Label',
     placeholder: 'Enter text',
     errorMessage: 'Field is required',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const error = await canvas.findByText('Field is required');
+    await expect(error).toBeInTheDocument();
   },
 };
 
 export const InputWithIcon: Story = {
   args: {
-    name: 'Default',
+    name: 'WithIcon',
     label: 'Label',
     placeholder: 'Enter text',
     appendInnerIcon: 'mumble',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByPlaceholderText('Enter text');
+    await userEvent.type(input, 'Typing with an icon!');
+    await expect(input).toHaveValue('Typing with an icon!');
   },
 };
 
@@ -81,7 +103,7 @@ export const InputWithClickableIcon: Story = {
 
 export const InputPassword: Partial<Story> = {
   render() {
-    const [inputType, setInputType] = useState('password');
+    const [inputType, setInputType] = useState<'password' | 'text'>('password');
     function onClickEyeIcon() {
       setInputType(inputType === 'password' ? 'text' : 'password');
     }
@@ -96,5 +118,18 @@ export const InputPassword: Partial<Story> = {
         onAppendInnerIconClick={onClickEyeIcon}
       />
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByLabelText('Password');
+    const icon = canvas.getByRole('button');
+
+    // Click the eye icon to reveal password
+    await userEvent.click(icon);
+    await expect(input).toHaveAttribute('type', 'text');
+
+    // Click again to hide password
+    await userEvent.click(icon);
+    await expect(input).toHaveAttribute('type', 'password');
   },
 };
