@@ -1,6 +1,7 @@
 import React, { useId } from 'react';
 import { Label } from '../../typography';
 import { Icon, type IconName } from '../../icon';
+import { ErrorMessage } from '../error-message';
 import clsx from 'clsx';
 
 interface InputProps extends React.ComponentProps<'input'> {
@@ -73,11 +74,7 @@ export const Input: React.FC<InputProps> = ({
             </div>
           ))}
       </div>
-      {errorMessage && (
-        <p className="mt-xxs text-error text-right text-xs" id={errorId} role="alert" aria-live="assertive">
-          {errorMessage}
-        </p>
-      )}
+      {errorMessage && <ErrorMessage id={errorId} message={errorMessage} />}
     </div>
   );
 };
