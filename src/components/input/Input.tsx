@@ -60,6 +60,7 @@ export const Input: React.FC<InputProps> = ({
           (onAppendInnerIconClick && !errorMessage ? (
             <button
               type="button"
+              onMouseDown={(e) => e.preventDefault()} // prevent focus change on mouse click
               onClick={onAppendInnerIconClick}
               aria-label={appendInnerIconAriaLabel || `${label || 'Input'} appended action`}
               className="pr-sm absolute inset-y-0 right-0 flex items-center border-0 bg-transparent p-0 hover:cursor-pointer focus:outline-none"
