@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.6.0...v1.7.0) (2025-10-20)
+
+
+### Features
+
+* ErrorMessage component ([#13](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/13)) ([985ec24](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/985ec247efa622b31d28c95bf984da1fbd2ee543))
+
 # [1.6.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.5.0...v1.6.0) (2025-10-19)
 
 
