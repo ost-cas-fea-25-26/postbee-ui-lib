@@ -20,7 +20,10 @@ const meta: Meta<typeof IconButton> = {
     onClick: { action: 'clicked' },
   },
   parameters: {
-    layout: 'centered',
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/nsXR2h0KwciWpuwKRD58FX/Mumble?node-id=8862-2489&t=qxxR9geJaxBCzsRu-4',
+    },
   },
 };
 
