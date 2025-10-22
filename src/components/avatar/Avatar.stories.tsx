@@ -45,7 +45,7 @@ export const Default: Story = {
 
 export const WithImage: Story = {
   args: {
-    src: 'mumble-icon-01.svg',
+    src: 'mumble-icon.png',
     size: 'md',
     alt: 'GitHub Avatar',
     fallback: 'GH',
