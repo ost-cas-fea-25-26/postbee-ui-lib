@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.7.0...v1.8.0) (2025-10-22)
+
+
+### Features
+
+* add textarea component ([#14](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/14)) ([93f3a0e](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/93f3a0e0faacf2842e1c87799b0dec2842ed8196))
+
 # [1.7.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.6.0...v1.7.0) (2025-10-20)
 
 
