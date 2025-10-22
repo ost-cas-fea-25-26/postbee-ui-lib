@@ -1,0 +1,65 @@
+import * as React from 'react';
+import * as RadixAvatar from '@radix-ui/react-avatar';
+import { cn } from '../../utils';
+import { IconButton } from '../icon-button/IconButton.tsx';
+
+export interface AvatarProps extends React.ComponentPropsWithoutRef<typeof RadixAvatar.Root> {
+  src?: string;
+  alt?: string;
+  fallback?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  isEditable?: boolean;
+  onEdit?: () => void;
+}
+
+export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
+  ({ src, alt, fallback, size = 'md', isEditable = false, onEdit, className, ...props }, ref) => {
+    const sizeClasses = {
+      sm: 'w-10 h-10 text-sm border-none', // 40x40
+      md: 'w-16 h-16 text-base', // 64x64
+      lg: 'w-24 h-24 text-lg', // 96x96
+      xl: 'w-40 h-40 text-xl', // 160x160
+    }[size];
+
+    return (
+      <div className={cn('group relative inline-block', className)}>
+        {/* Avatar Root */}
+        <RadixAvatar.Root
+          ref={ref}
+          className={cn(
+            'bg-primary-50 text-secondary border-secondary-50 border-6 relative inline-flex select-none items-center justify-center overflow-hidden rounded-full',
+            sizeClasses,
+          )}
+          {...props}
+        >
+          {src ? (
+            <RadixAvatar.Image src={src} alt={alt} className="h-full w-full object-cover" />
+          ) : (
+            <RadixAvatar.Fallback
+              className="bg-primary-100 flex h-full w-full items-center justify-center font-medium"
+              delayMs={500}
+            >
+              {fallback || ''}
+            </RadixAvatar.Fallback>
+          )}
+        </RadixAvatar.Root>
+
+        {/* Edit Button Overlay */}
+        {isEditable && (
+          <IconButton
+            icon="edit"
+            size="lg"
+            ariaLabel="Edit avatar"
+            onClick={onEdit}
+            className={cn(
+              'bg-secondary absolute bottom-3 right-3 translate-x-1/4 translate-y-1/4 rounded-full shadow-md',
+              'opacity-100',
+            )}
+          />
+        )}
+      </div>
+    );
+  },
+);
+
+Avatar.displayName = 'Avatar';
