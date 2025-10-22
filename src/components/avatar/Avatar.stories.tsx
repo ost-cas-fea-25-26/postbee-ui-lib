@@ -21,12 +21,15 @@ const meta: Meta<typeof Avatar> = {
     onEdit: { action: 'editClicked' },
   },
   parameters: {
-    layout: 'centered',
     docs: {
       description: {
         component:
           "Accessible Avatar component built on top of Radix UI primitives, with optional 'edit' variant that displays an edit button overlay.",
       },
+    },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/nsXR2h0KwciWpuwKRD58FX/Mumble?node-id=8862-666&t=qxxR9geJaxBCzsRu-4',
     },
   },
 };
