@@ -1,0 +1,53 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Borders" />
+
+# Borders
+
+Borders are visual boundaries that help define, separate, and structure elements within an interface. They enhance clarity, emphasize hierarchy, and contribute to the overall visual rhythm of a layout.
+
+---
+
+## Border Width
+
+Border widths establish visual weight and prominence. Thicker borders can draw attention or separate key sections, while thinner ones provide subtle separation.
+
+<Unstyled>
+    <div className="flex flex-wrap items-center gap-6">
+        {[
+            { width: '1px', class: 'border-1' },
+            { width: '2px', class: 'border-2' },
+            { width: '3px', class: 'border-3' },
+            { width: '4px', class: 'border-4' },
+            { width: '6px', class: 'border-6' },
+        ].map(({ width, class: cls }) => (
+            <div key={width} className="flex flex-col items-center">
+                <div className={`h-xxl w-xxl rounded border ${cls} border-secondary-100 bg-primary-200`}></div>
+                <span className="mt-2 text-sm text-secondary-600">{width}</span>
+            </div>
+        ))}
+    </div>
+</Unstyled>
+
+---
+
+## Border Radius
+
+Border radii define the curvature of corners. Using different radius sizes can help convey brand personality—sharp corners feel modern and crisp, while rounded ones feel friendly and approachable.
+
+<Unstyled>
+    <div className="flex flex-wrap items-center gap-6">
+        {[
+            { label: 'None', class: '' },
+            { label: 'Small — rounded-s', class: 'rounded-s' },
+            { label: 'Medium — rounded-m', class: 'rounded-m' },
+            { label: 'Large — rounded-l', class: 'rounded-l' },
+            { label: 'Full — rounded-full', class: 'rounded-full' },
+        ].map(({ label, class: cls }) => (
+            <div key={label} className="flex flex-col items-center">
+                <div className={`h-xxl w-xxl border border-3 border-secondary-100 bg-primary-200 ${cls}`}></div>
+                <span className="mt-2 text-sm text-secondary-600">{label}</span>
+            </div>
+        ))}
+    </div>
+</Unstyled>
