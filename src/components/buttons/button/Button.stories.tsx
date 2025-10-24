@@ -22,6 +22,13 @@ const meta: Meta<typeof Button> = {
   argTypes: {},
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
+  decorators: [
+    (Story) => (
+      <div className="w-80 text-center">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;
