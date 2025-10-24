@@ -27,7 +27,9 @@ export const Icon: React.FC<IconProps> = ({ icon, title, color, size = 16, class
         width={size}
         height={size}
         className={clsx(colorClassName, className)}
-        aria-hidden={title ? undefined : 'true'} // when no title is given, handle the icon as decorative
+        // when no title is given, handle the icon as decorative
+        aria-hidden={title ? undefined : 'true'}
+        tabIndex={title ? undefined : -1}
         title={title}
         titleId={title ? `icon-title-${id}` : undefined}
         role={title ? 'img' : undefined}
