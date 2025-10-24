@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.1...v1.9.2) (2025-10-24)
+
+
+### Bug Fixes
+
+* button focus visible ([#43](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/43)) ([e1c3e31](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/e1c3e314ef443e1d68080ac964a602cdb550210d))
+
 ## [1.9.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.0...v1.9.1) (2025-10-24)
 
 
