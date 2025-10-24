@@ -48,6 +48,19 @@ export const Tertiary: Story = {
   },
 };
 
+export const WithIcon: Story = {
+  args: {
+    text: 'With icon',
+    icon: 'mumble',
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    icon: 'mumble',
+  },
+};
+
 export const Large: Story = {
   args: {
     size: 'lg',
