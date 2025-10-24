@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.2...v1.9.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* **story/input:** replace style with tailwind css class ([#45](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/45)) ([4dd9d27](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/4dd9d27848f056791c95191c9451a73cf3c5b079))
+
 ## [1.9.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.1...v1.9.2) (2025-10-24)
 
 
