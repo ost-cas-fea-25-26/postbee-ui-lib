@@ -47,15 +47,14 @@ describe('<Link />', () => {
     expect(link).not.toHaveAttribute('rel');
   });
 
-  it('renders as a span when disabled', () => {
+  it('includes proper accessibility attributes for disabled state', () => {
     render(
       <Link href="/about" disabled>
         Disabled
       </Link>,
     );
-    const span = screen.getByText('Disabled');
-    expect(span.tagName).toBe('SPAN');
-    expect(span).toHaveAttribute('aria-disabled', 'true');
+    const link = screen.getByRole('link', { name: /disabled/i });
+    expect(link).toHaveAttribute('aria-disabled', 'true');
   });
 
   it('prevents click when disabled', async () => {
@@ -66,8 +65,8 @@ describe('<Link />', () => {
         Disabled
       </Link>,
     );
-    const span = screen.getByText('Disabled');
-    await user.click(span);
+    const link = screen.getByRole('link', { name: /disabled/i });
+    await user.click(link);
     expect(onClick).not.toHaveBeenCalled();
   });
 
