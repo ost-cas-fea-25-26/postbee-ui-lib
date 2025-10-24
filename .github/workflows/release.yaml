@@ -1,8 +1,13 @@
 name: Release
-on: [push, pull_request]
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  semantic-release:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -10,14 +15,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: 'npm'
 
-      - name: Install deps (npm ci)
-        shell: bash
+      - name: Install dependencies
         run: npm ci
 
-      - run: npm run build
+      - name: Build
+        run: npm run build
 
-      - name: Pack dry-run
+      - name: Dry-run Pack
         run: npm pack --dry-run
 
       - name: Semantic Release
