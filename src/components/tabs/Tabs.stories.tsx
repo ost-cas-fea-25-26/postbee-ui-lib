@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useState } from 'react';
+import { userEvent, within } from 'storybook/test';
 import { type TabItem, Tabs } from './Tabs';
 
 const meta: Meta<typeof Tabs> = {
@@ -18,11 +20,12 @@ type Story = StoryObj<typeof Tabs>;
 
 export const Default: Story = {
   render: () => {
+    const [activeTab, setActiveTab] = useState('Deine Mumbles');
+
     const tabs: TabItem[] = [
       {
         text: 'Deine Mumbles',
         content: <p>Content for: Deine Mumbles</p>,
-        selected: true,
         onClick: () => console.log('Tab 1 clicked'),
       },
       {
@@ -32,6 +35,16 @@ export const Default: Story = {
       },
     ];
 
-    return <Tabs tabs={tabs} />;
+    return <Tabs tabs={tabs} value={activeTab} onValueChange={setActiveTab} />;
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Click the second tab
+    const tab2 = await canvas.getByRole('tab', { name: 'Deine Likes' });
+    await userEvent.click(tab2);
+
+    // Optionally assert the content changed
+    await canvas.getByText('Content for: Deine Likes');
   },
 };
