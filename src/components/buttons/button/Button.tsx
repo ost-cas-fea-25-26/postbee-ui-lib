@@ -27,11 +27,22 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const variantClasses = {
     primary:
-      'bg-primary text-primary-foreground outline-3 hover:bg-primary-hover hover:outline-primary-hover-outline active:bg-primary-active active:outline-primary-active-outline',
+      'bg-primary text-primary-foreground outline-3 ' +
+      'hover:bg-primary-hover hover:outline-primary-hover-outline ' +
+      'active:bg-primary-active active:outline-primary-active-outline ' +
+      'focus-visible:outline-primary-hover-outline',
+
     secondary:
-      'bg-secondary text-secondary-foreground outline-3 hover:bg-secondary-hover hover:outline-secondary-hover-outline active:bg-secondary-active active:outline-secondary-active-outline',
+      'bg-secondary text-secondary-foreground outline-3 ' +
+      'hover:bg-secondary-hover hover:outline-secondary-hover-outline ' +
+      'active:bg-secondary-active active:outline-secondary-active-outline ' +
+      'focus-visible:outline-secondary-hover-outline',
+
     tertiary:
-      'bg-gradient-to-r from-tertiary to-primary text-tertiary-foreground outline-3 hover:bg-tertiary-hover hover:to-70% hover:outline-tertiary-hover-outline active:bg-tertiary-active active:outline-tertiary-active-outline active:to-50%',
+      'bg-gradient-to-r from-tertiary to-primary text-tertiary-foreground outline-3 ' +
+      'hover:bg-tertiary-hover hover:to-70% hover:outline-tertiary-hover-outline ' +
+      'active:bg-tertiary-active active:outline-tertiary-active-outline active:to-50% ' +
+      'focus-visible:outline-tertiary-hover-outline',
   };
 
   // render an icon button if only icon is present (no text or children)
