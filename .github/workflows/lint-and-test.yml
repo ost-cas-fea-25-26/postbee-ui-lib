@@ -5,6 +5,8 @@ on:
     workflows: ['Setup Dependencies']
     types:
       - completed
+  pull_request:
+    branches: [main]
 
 jobs:
   lint:
