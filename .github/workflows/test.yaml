@@ -9,28 +9,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # Checkout code
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      # Setup Node with caching
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'npm'
+          cache: 'npm' # Automatically caches node_modules
 
-      - name: Restore node_modules cache
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: deps-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      # Install dependencies if cache missed
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Install dependencies if cache missed
-        run: |
-          if [ ! -d node_modules ]; then
-            npm install
-          fi
-
+      # Run tests
       - name: Run tests
         run: npm run test
