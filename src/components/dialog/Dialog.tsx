@@ -1,6 +1,6 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { type ReactNode } from 'react';
-import { Button } from '../button';
+import { Button } from '../buttons';
 import { Icon } from '../icon';
 import { Heading } from '../typography';
 
@@ -52,15 +52,8 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
 
               {/* Actions */}
               <div className="mt-xxl gap-sm grid grid-cols-1 md:grid-cols-2">
-                <Button
-                  label="Abbrechen"
-                  icon="cancel"
-                  iconPosition="right"
-                  variant="secondary"
-                  onClick={onClose}
-                  size="medium"
-                />
-                <Button label="Speichern" icon="checkmark" iconPosition="right" onClick={onSubmit} size="medium" />
+                <Button text="Abbrechen" icon="cancel" variant="secondary" onClick={onClose} size="md" />
+                <Button text="Speichern" icon="checkmark" onClick={onSubmit} size="md" />
               </div>
             </div>
           </DialogPrimitive.Content>
