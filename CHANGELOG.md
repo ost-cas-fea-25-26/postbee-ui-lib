@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.0...v1.8.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* buttons ([#33](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/33)) ([928f9c0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/928f9c030a2051fab66bdc970f6496cc536d1d90))
+
 # [1.8.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.7.0...v1.8.0) (2025-10-22)
 
 
