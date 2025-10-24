@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Icon } from '../icon';
-import type { IconName } from '../icon';
+import { Icon } from '../../icon';
+import type { IconName } from '../../icon';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
 export type ButtonSize = 'sm' | 'md' | 'lg';
