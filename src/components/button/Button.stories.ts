@@ -50,14 +50,14 @@ export const Tertiary: Story = {
 
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: 'lg',
     text: 'Button',
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: 'sm',
     text: 'Button',
   },
 };

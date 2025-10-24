@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
-export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -16,7 +16,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
-  size = 'medium',
+  size = 'md',
   fullWidth = false,
   disabled = false,
   icon,
@@ -35,9 +35,9 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const sizeClasses = {
-    small: 'py-xs px-[12px] text-sm',
-    medium: 'p-[12px] text-md',
-    large: 'px-md py-sm text-md',
+    sm: 'py-xs px-[12px] text-sm',
+    md: 'p-[12px] text-md',
+    lg: 'px-md py-sm text-md',
   };
 
   return (
