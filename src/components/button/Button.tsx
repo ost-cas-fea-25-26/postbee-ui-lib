@@ -34,24 +34,28 @@ export const Button: React.FC<ButtonProps> = ({
       'bg-gradient-to-r from-tertiary to-primary text-tertiary-foreground outline-3 hover:bg-tertiary-hover hover:to-70% hover:outline-tertiary-hover-outline active:bg-tertiary-active active:outline-tertiary-active-outline active:to-50%',
   };
 
+  // render an icon button if only icon is present (no text or children)
+  const isIconOnly = !text && !children && icon;
+
   const sizeClasses = {
-    sm: 'py-xs px-[12px] text-sm',
-    md: 'p-[12px] text-md',
-    lg: 'px-md py-sm text-md',
+    sm: isIconOnly ? 'p-3' : 'py-xs px-3 text-sm',
+    md: isIconOnly ? 'p-4' : 'p-3 text-md',
+    lg: isIconOnly ? 'p-5' : 'px-md py-sm text-md',
   };
 
   return (
     <button
       type="button"
       disabled={disabled}
-      aria-disabled={disabled}
       className={clsx(
-        'inline-flex cursor-pointer items-center justify-center rounded-md font-semibold leading-none transition-colors disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex cursor-pointer items-center justify-center font-semibold leading-none transition-colors disabled:pointer-events-none disabled:opacity-50',
+        isIconOnly ? 'rounded-full' : 'rounded-md',
         variantClasses[variant],
         sizeClasses[size],
         fullWidth && 'w-full',
         className,
       )}
+      aria-label={isIconOnly ? `${icon} icon` : undefined}
       {...props}
     >
       {text ? text : children}
