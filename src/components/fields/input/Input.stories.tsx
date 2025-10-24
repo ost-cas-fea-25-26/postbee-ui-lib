@@ -17,8 +17,7 @@ const meta = {
   argTypes: {},
   decorators: [
     (Story) => (
-      // The div below acts as your 400px container
-      <div style={{ width: '280px' }}>
+      <div className="w-80">
         <Story />
       </div>
     ),
