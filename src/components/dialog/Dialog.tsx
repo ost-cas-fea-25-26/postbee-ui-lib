@@ -50,7 +50,7 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
             {/* Description */}
             {description && (
               <DialogPrimitive.Description asChild>
-                <p className="p-lg text-neutral-700">{description}</p>
+                <p className="px-lg pt-lg">{description}</p>
               </DialogPrimitive.Description>
             )}
 
