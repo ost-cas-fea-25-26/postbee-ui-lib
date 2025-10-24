@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as RadixAvatar from '@radix-ui/react-avatar';
-import { cn } from '../../utils';
-import { IconButton } from '../icon-button/IconButton.tsx';
+import clsx from 'clsx';
+import { IconButton } from '../buttons/icon-button/IconButton.tsx';
 
 export interface AvatarProps extends React.ComponentPropsWithoutRef<typeof RadixAvatar.Root> {
   src?: string;
@@ -22,11 +22,10 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
     }[size];
 
     return (
-      <div className={cn('group relative inline-block', className)}>
-        {/* Avatar Root */}
+      <div className={clsx('group relative inline-block', className)}>
         <RadixAvatar.Root
           ref={ref}
-          className={cn(
+          className={clsx(
             'bg-primary-200 text-secondary border-secondary-50 border-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
             sizeClasses,
           )}
@@ -41,22 +40,16 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
           )}
         </RadixAvatar.Root>
 
-        {/* Edit Button Overlay */}
         {isEditable && (
           <IconButton
             icon="edit"
-            size="lg"
-            ariaLabel="Edit avatar"
+            aria-label="Edit avatar"
+            variant="secondary"
             onClick={onEdit}
-            className={cn(
-              'bg-secondary absolute bottom-4 right-4 translate-x-1/4 translate-y-1/4 rounded-full shadow-md',
-              'opacity-100',
-            )}
+            className={clsx('absolute bottom-4 right-4 translate-x-1/4 translate-y-1/4 !outline-0')}
           />
         )}
       </div>
     );
   },
 );
-
-Avatar.displayName = 'Avatar';
