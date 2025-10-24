@@ -1,5 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
+import { Icon } from '../icon';
+import type { IconName } from '../icon';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -8,8 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
+  icon?: IconName;
   text?: string;
 }
 
@@ -20,7 +21,6 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   disabled = false,
   icon,
-  iconPosition = 'left',
   text,
   className,
   ...props
@@ -54,9 +54,8 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       {...props}
     >
-      {icon && iconPosition === 'left' && <span className="mr-2 flex items-center">{icon}</span>}
       {text ? text : children}
-      {icon && iconPosition === 'right' && <span className="ml-2 flex items-center">{icon}</span>}
+      {icon && <Icon icon={icon} size={16} className={clsx({ 'ml-xs': !isIconOnly })} />}
     </button>
   );
 };
