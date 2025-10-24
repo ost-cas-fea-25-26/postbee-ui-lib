@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.2...v1.9.0) (2025-10-24)
+
+
+### Features
+
+* add IconButton ([#41](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/41)) ([eedb771](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/eedb771e0ed96f6608b17d27c879c8bd30f3a77a))
+
 ## [1.8.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.1...v1.8.2) (2025-10-24)
 
 
