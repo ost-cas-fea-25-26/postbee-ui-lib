@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.1...v1.8.2) (2025-10-24)
+
+
+### Bug Fixes
+
+* **Icon:** prevent focus on the icon if no title is given ([#37](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/37)) ([4e6466c](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/4e6466c04c4b14b66dd790a4a05eb3affd6fefac))
+
 ## [1.8.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.0...v1.8.1) (2025-10-24)
 
 
