@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.3...v1.9.4) (2025-10-24)
+
+
+### Bug Fixes
+
+* **story/buttons:** add a container with a width for fullWidth option ([#44](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/44)) ([87bb8a0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/87bb8a0f02c4b9a59171812600a895442f82e9ec))
+
 ## [1.9.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.2...v1.9.3) (2025-10-24)
 
 
