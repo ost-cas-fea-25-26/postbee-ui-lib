@@ -27,7 +27,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
         <RadixAvatar.Root
           ref={ref}
           className={cn(
-            'bg-primary-50 text-secondary border-secondary-50 border-6 relative inline-flex select-none items-center justify-center overflow-hidden rounded-full',
+            'bg-primary-200 text-secondary border-secondary-50 border-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
             sizeClasses,
           )}
           {...props}
@@ -35,10 +35,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
           {src ? (
             <RadixAvatar.Image src={src} alt={alt} className="h-full w-full object-cover" />
           ) : (
-            <RadixAvatar.Fallback
-              className="bg-primary-100 flex h-full w-full items-center justify-center font-medium"
-              delayMs={500}
-            >
+            <RadixAvatar.Fallback className="flex h-full w-full items-center justify-center font-medium" delayMs={500}>
               {fallback || ''}
             </RadixAvatar.Fallback>
           )}
@@ -52,7 +49,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
             ariaLabel="Edit avatar"
             onClick={onEdit}
             className={cn(
-              'bg-secondary absolute bottom-3 right-3 translate-x-1/4 translate-y-1/4 rounded-full shadow-md',
+              'bg-secondary absolute bottom-4 right-4 translate-x-1/4 translate-y-1/4 rounded-full shadow-md',
               'opacity-100',
             )}
           />
