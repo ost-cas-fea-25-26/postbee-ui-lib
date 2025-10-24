@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   fullWidth?: boolean;
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
-  label?: string;
+  text?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   icon,
   iconPosition = 'left',
-  label,
+  text,
   className,
   ...props
 }) => {
@@ -55,7 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {icon && iconPosition === 'left' && <span className="mr-2 flex items-center">{icon}</span>}
-      {label ? label : children}
+      {text ? text : children}
       {icon && iconPosition === 'right' && <span className="ml-2 flex items-center">{icon}</span>}
     </button>
   );

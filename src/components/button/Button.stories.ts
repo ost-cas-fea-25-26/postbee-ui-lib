@@ -30,20 +30,20 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    label: 'Primary',
+    text: 'Primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Secondary',
+    text: 'Secondary',
     variant: 'secondary',
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    label: 'Tertiary',
+    text: 'Tertiary',
     variant: 'tertiary',
   },
 };
@@ -51,13 +51,13 @@ export const Tertiary: Story = {
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
+    text: 'Button',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
+    text: 'Button',
   },
 };
