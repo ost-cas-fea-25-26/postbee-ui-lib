@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.9.0...v1.9.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* **Icon:** remove tabindex again as it makes it focusable which is not what we want ([#42](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/42)) ([9174c65](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/9174c65ccd254f6467978abc8acf7835a945a7d1))
+
 # [1.9.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.8.2...v1.9.0) (2025-10-24)
 
 
