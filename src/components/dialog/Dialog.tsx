@@ -12,9 +12,10 @@ export interface DialogProps {
   onClose: () => void;
   onSubmit: () => void;
   children: ReactNode;
+  actions?: ReactNode;
 }
 
-export const Dialog = ({ open, title, description, width = 'md', onClose, onSubmit, children }: DialogProps) => {
+export const Dialog = ({ open, title, description, width = 'md', onClose, onSubmit, children, actions }: DialogProps) => {
   const maxWidth = width === 'sm' ? 'md:max-w-[465px]' : 'md:max-w-[494px]';
 
   return (
@@ -23,7 +24,10 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
         <DialogPrimitive.Overlay className="bg-primary-100 fixed inset-0" />
 
         <div className="fixed inset-0 z-50 grid min-h-full place-items-center">
-          <DialogPrimitive.Content className={`w-full overflow-hidden rounded-lg bg-white shadow-lg ${maxWidth}`}>
+          <DialogPrimitive.Content
+            aria-describedby={description ? undefined : void 0}
+            className={`w-full overflow-hidden rounded-lg bg-white text-base shadow-lg ${maxWidth}`}
+          >
             {/* Header */}
             <div className="bg-primary-600 px-lg py-md flex items-center justify-between text-white">
               <DialogPrimitive.Title asChild>
@@ -55,9 +59,16 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
               {children}
 
               {/* Actions */}
+
               <div className="mt-xxl gap-sm grid grid-cols-1 md:grid-cols-2">
-                <Button text="Abbrechen" icon="cancel" variant="secondary" onClick={onClose} size="md" />
-                <Button text="Speichern" icon="checkmark" onClick={onSubmit} size="md" />
+                {actions ? (
+                  actions
+                ) : (
+                  <>
+                    <Button text="Abbrechen" icon="cancel" variant="secondary" onClick={onClose} size="md" />
+                    <Button text="Speichern" icon="checkmark" onClick={onSubmit} size="md" />
+                  </>
+                )}
               </div>
             </div>
           </DialogPrimitive.Content>
