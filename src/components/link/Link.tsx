@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   className?: string;
@@ -17,9 +18,9 @@ export const Link: React.FC<LinkProps> = ({ className = '', children, href, targ
 
   if (disabled) {
     return (
-      <span aria-disabled="true" className={`${baseStyles} ${disabledStyles} ${className}`}>
+      <a role="link" aria-disabled="true" className={clsx(baseStyles, disabledStyles)}>
         {children}
-      </span>
+      </a>
     );
   }
 
