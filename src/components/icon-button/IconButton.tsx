@@ -32,19 +32,19 @@ export const IconButton: React.FC<IconButtonProps> = ({
   const shouldRenderIcon = icon !== undefined || label !== undefined;
 
   const layoutClass = label
-    ? 'flex flex-col items-center justify-center px-2 py-1 rounded-lg'
+    ? 'flex flex-col items-center justify-center px-2 pt-1 rounded-md'
     : 'inline-flex items-center justify-center rounded-full';
 
   const sizeClasses = {
-    sm: 'w-6 h-6 p-1',
-    md: 'w-8 h-8 p-1.5',
-    lg: 'w-10 h-10 p-2',
+    sm: 'min-w-6 h-6 p-1',
+    md: 'min-w-8 h-8 p-1.5',
+    lg: 'min-w-10 h-10 p-2',
   };
 
   const labelSizeClasses = {
-    sm: 'w-10 h-12',
-    md: 'w-14 h-14',
-    lg: 'w-16 h-16',
+    sm: 'min-w-10 h-12 text-xs',
+    md: 'min-w-14 h-14 text-sm',
+    lg: 'min-w-16 h-16 text-sm',
   };
 
   const sizeClass = label ? labelSizeClasses[size] : sizeClasses[size];
@@ -53,7 +53,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
     <>
       {shouldRenderIcon && icon && <Icon icon={icon} {...finalIconProps} />}
       {children}
-      {label && <span className="mt-1 block text-center text-xs text-white">{label}</span>}
+      {label && <span className="mt-0.5 block text-center text-white">{label}</span>}
     </>
   );
 
@@ -62,7 +62,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
       type="button"
       onClick={onClick}
       aria-label={ariaLabel}
-      className={`bg-primary shadow transition-opacity ${sizeClass} ${layoutClass} $ ${className}`}
+      className={`bg-primary hover:bg-primary-hover cursor-pointer shadow transition-opacity ${sizeClass} ${layoutClass} ${className}`}
     >
       {content}
     </button>
