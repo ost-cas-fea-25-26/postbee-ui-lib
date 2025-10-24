@@ -33,7 +33,11 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
               </DialogPrimitive.Title>
 
               <DialogPrimitive.Close asChild>
-                <button type="button" className="focus-visible:outline-primary-100 cursor-pointer outline-offset-4">
+                <button
+                  type="button"
+                  aria-label="Close dialog"
+                  className="focus-visible:outline-primary-100 cursor-pointer outline-offset-4"
+                >
                   <Icon icon="cancel" color="white" />
                 </button>
               </DialogPrimitive.Close>
