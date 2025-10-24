@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { Dialog } from './Dialog';
+import { Button } from '../buttons';
 
 describe('Dialog component', () => {
   const title = 'Test Dialog';
@@ -70,5 +71,26 @@ describe('Dialog component', () => {
 
     fireEvent.keyDown(document, { key: 'Escape', code: 'Escape' });
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders custom actions when provided', () => {
+    renderDialog({
+      actions: <Button text="Custom Action" onClick={onSubmit} size="md" />,
+    });
+
+    expect(screen.getByRole('button', { name: /Custom Action/i })).toBeDefined();
+    expect(screen.queryByText(/Abbrechen/i)).toBeNull();
+    expect(screen.queryByText(/Speichern/i)).toBeNull();
+  });
+
+  it('calls the provided function from custom action', () => {
+    renderDialog({
+      actions: <Button text="Only Save" onClick={onSubmit} size="md" />,
+    });
+
+    const customButton = screen.getByRole('button', { name: /Only Save/i });
+    fireEvent.click(customButton);
+
+    expect(onSubmit).toHaveBeenCalledTimes(1);
   });
 });
