@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from 'storybook/test';
 import { describe, it, expect, vi } from 'vitest';
 import { Link } from './Link';
 
