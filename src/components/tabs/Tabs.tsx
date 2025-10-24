@@ -4,24 +4,18 @@ import * as TabsPrimitive from '@radix-ui/react-tabs';
 export type TabItem = {
   text: string;
   content: React.ReactNode;
-  selected?: boolean;
   onClick: () => void;
 };
 
 export type TabsProps = {
   tabs: TabItem[];
+  value: string;
+  onValueChange: (value: string) => void;
 };
 
-export const Tabs: React.FC<TabsProps> = ({ tabs }) => {
-  const getInitialValue = () => {
-    const selectedTab = tabs.find((tab) => tab.selected);
-    return selectedTab?.text || tabs[0]?.text;
-  };
-
-  const [value, setValue] = React.useState(getInitialValue());
-
+export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
   const handleValueChange = (newValue: string) => {
-    setValue(newValue);
+    onValueChange(newValue);
     const tab = tabs.find((t) => t.text === newValue);
     if (tab) {
       tab.onClick();
