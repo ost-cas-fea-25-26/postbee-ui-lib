@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Avatar } from './Avatar';
-import { fn } from 'storybook/test'; // for mock handlers
+import { fn } from 'storybook/test';
 
 const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
