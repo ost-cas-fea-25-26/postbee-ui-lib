@@ -70,7 +70,6 @@ describe('Button Component', () => {
     render(<Button icon="checkmark">Click Me</Button>);
 
     const button = screen.getByRole('button');
-    // check if <svg> exists inside button instead of data-testid
     const svg = button.querySelector('svg');
     expect(svg).toBeInTheDocument();
   });
