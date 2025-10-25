@@ -1,22 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconButton } from './IconButton';
+import { HeaderButton } from './HeaderButton';
 import { fn } from 'storybook/test';
 
-const meta: Meta<typeof IconButton> = {
-  title: 'Components/IconButton',
-  component: IconButton,
+const meta: Meta<typeof HeaderButton> = {
+  title: 'Components/Buttons/HeaderButton',
+  component: HeaderButton,
   tags: ['autodocs'],
   args: {
     icon: 'edit',
-    label: undefined,
+    text: 'Edit',
     size: 'md',
-    ariaLabel: 'Icon button',
     onClick: fn(),
   },
   argTypes: {
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
-    icon: { control: 'text' },
-    label: { control: 'text' },
+    icon: { control: 'select' },
+    text: { control: 'text' },
     onClick: { action: 'clicked' },
   },
   parameters: {
@@ -28,30 +27,26 @@ const meta: Meta<typeof IconButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof IconButton>;
+type Story = StoryObj<typeof HeaderButton>;
 
 // --- Stories ----------------------------------------------------
 
 export const Default: Story = {
-  args: {
-    icon: 'edit',
-  },
   parameters: {
     docs: {
-      description: { story: 'Simple IconButton with only an icon.' },
+      description: { story: 'HeaderButton with an icon and a label below.' },
     },
   },
 };
 
-export const WithLabel: Story = {
+export const IconOnly: Story = {
   args: {
     icon: 'edit',
-    label: 'Edit',
-    size: 'md',
+    text: undefined,
   },
   parameters: {
     docs: {
-      description: { story: 'IconButton with an icon and a label below.' },
+      description: { story: 'Simple HeaderButton with only an icon.' },
     },
   },
 };
@@ -59,14 +54,14 @@ export const WithLabel: Story = {
 export const Sizes: Story = {
   render: (args) => (
     <div className="flex items-center gap-4">
-      <IconButton {...args} size="sm" />
-      <IconButton {...args} size="md" />
-      <IconButton {...args} size="lg" />
+      <HeaderButton {...args} size="sm" />
+      <HeaderButton {...args} size="md" />
+      <HeaderButton {...args} size="lg" />
     </div>
   ),
   parameters: {
     docs: {
-      description: { story: 'IconButton available in small, medium, and large sizes.' },
+      description: { story: 'HeaderButton available in small, medium, and large sizes.' },
     },
   },
 };
