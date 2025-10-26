@@ -1,7 +1,8 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, vi, afterEach } from 'vitest';
-import { Dialog } from './Dialog';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
 import { Button } from '../buttons';
+import { Dialog } from './Dialog';
 
 describe('Dialog component', () => {
   const title = 'Test Dialog';

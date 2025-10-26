@@ -1,5 +1,7 @@
-import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { type ReactNode } from 'react';
+
+import * as DialogPrimitive from '@radix-ui/react-dialog';
+
 import { Button } from '../buttons';
 import { Icon } from '../icon';
 import { Heading } from '../typography';
