@@ -1,6 +1,7 @@
+import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import '@testing-library/jest-dom';
+
 import { Label } from './Label';
 
 describe('Label component', () => {

@@ -1,9 +1,10 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import '@testing-library/jest-dom';
+
 import { Icon } from './Icon';
-import { ICON_COMPONENTS } from './constants';
 import type { IconName } from './Icon';
+import { ICON_COMPONENTS } from './constants';
 
 describe('Icon component', () => {
   const iconNames = Object.keys(ICON_COMPONENTS) as IconName[];
