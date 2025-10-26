@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+
 import { Icon, type IconName } from './Icon';
 import { ICON_COMPONENTS } from './constants';
 

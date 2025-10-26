@@ -1,6 +1,8 @@
 import React, { useId } from 'react';
+
 import clsx from 'clsx';
-import { ICON_COMPONENTS, COLOR_CLASS_NAMES } from './constants';
+
+import { COLOR_CLASS_NAMES, ICON_COMPONENTS } from './constants';
 
 export type IconName = keyof typeof ICON_COMPONENTS;
 export type IconColor = keyof typeof COLOR_CLASS_NAMES;

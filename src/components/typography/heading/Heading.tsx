@@ -1,4 +1,5 @@
 import React from 'react';
+
 import clsx from 'clsx';
 
 export interface HeadingProps extends React.ComponentProps<'h1' | 'h2' | 'h3' | 'h4'> {

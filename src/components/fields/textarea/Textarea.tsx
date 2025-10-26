@@ -1,8 +1,10 @@
 import React, { useId } from 'react';
-import { Label } from '../../typography';
-import { Icon, type IconName } from '../../icon';
-import { ErrorMessage } from '../error-message';
+
 import clsx from 'clsx';
+
+import { Icon, type IconName } from '../../icon';
+import { Label } from '../../typography';
+import { ErrorMessage } from '../error-message';
 
 interface TextareaProps extends React.ComponentProps<'textarea'> {
   name: string;
