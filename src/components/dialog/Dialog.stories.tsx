@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Dialog } from './Dialog';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
+
 import { Button } from '../buttons';
+import { Dialog } from './Dialog';
 
 const meta: Meta<typeof Dialog> = {
   title: 'Components/Dialog',
