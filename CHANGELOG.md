@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.11.0...v1.11.1) (2025-10-26)
+
+
+### Bug Fixes
+
+* tabs ([#49](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/49)) ([10a702c](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/10a702c6f908a32b91a4d5dd2c0d023349cb2671))
+
 # [1.11.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.10.0...v1.11.0) (2025-10-26)
 
 
