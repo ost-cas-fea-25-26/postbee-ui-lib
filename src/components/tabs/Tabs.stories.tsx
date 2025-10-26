@@ -1,6 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { userEvent, within } from 'storybook/test';
+
 import { type TabItem, Tabs } from './Tabs';
 
 const meta: Meta<typeof Tabs> = {
