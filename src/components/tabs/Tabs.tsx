@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 
 export type TabItem = {
@@ -30,7 +31,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
             key={tab.text}
             value={tab.text}
             aria-label={tab.text}
-            className="data-[state=active]:text-primary-600 pb-label-lg hover:bg-secondary-100 h-10 cursor-pointer rounded-md px-3 py-1 text-lg focus:outline-none data-[state=active]:bg-white"
+            className="data-[state=active]:text-primary-600 pb-label-lg hover:text-secondary-900 h-10 cursor-pointer rounded-md px-3 py-1 text-lg focus:outline-none data-[state=active]:bg-white"
           >
             {tab.text}
           </TabsPrimitive.Trigger>

@@ -1,9 +1,11 @@
-import { describe, it, expect, vi } from 'vitest';
+import * as React from 'react';
+
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from 'storybook/test';
-import { Tabs, type TabItem } from './Tabs';
-import * as React from 'react';
-import '@testing-library/jest-dom';
+import { describe, expect, it, vi } from 'vitest';
+
+import { type TabItem, Tabs } from './Tabs';
 
 describe('Tabs component (stateless)', () => {
   // Wrapper for controlled Tabs
