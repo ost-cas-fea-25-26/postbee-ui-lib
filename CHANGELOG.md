@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.11.1...v1.12.0) (2025-10-26)
+
+
+### Features
+
+* improve dialog ([#48](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/48)) ([31efb20](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/31efb201817034704de5edc70e9e4a84cf267142))
+
 ## [1.11.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.11.0...v1.11.1) (2025-10-26)
 
 
