@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { HeaderButton } from './HeaderButton';
 import { fn } from 'storybook/test';
+
+import { HeaderButton } from './HeaderButton';
 
 const meta: Meta<typeof HeaderButton> = {
   title: 'Components/Buttons/HeaderButton',

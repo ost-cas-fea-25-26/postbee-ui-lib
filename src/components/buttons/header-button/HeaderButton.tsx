@@ -1,7 +1,9 @@
 import React from 'react';
+
+import clsx from 'clsx';
+
 import { Icon, type IconProps } from '../../icon';
 import type { IconName } from '../../icon';
-import clsx from 'clsx';
 
 export interface HeaderButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: IconName;
