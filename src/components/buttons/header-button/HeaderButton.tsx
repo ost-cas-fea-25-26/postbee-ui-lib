@@ -37,7 +37,7 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
   };
 
   const labelSizeClasses = {
-    sm: 'min-w-10 h-12 text-xs',
+    sm: 'min-w-12 h-12 text-xs',
     md: 'min-w-14 h-14 text-sm',
     lg: 'min-w-16 h-16 text-sm',
   };
