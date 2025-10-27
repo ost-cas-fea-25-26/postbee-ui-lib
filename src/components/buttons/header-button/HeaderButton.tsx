@@ -7,26 +7,15 @@ import type { IconName } from '../../icon';
 
 export interface HeaderButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: IconName;
-  iconProps?: Partial<Omit<IconProps, 'icon'>>;
   text?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 
-export const HeaderButton: React.FC<HeaderButtonProps> = ({
-  text,
-  icon,
-  iconProps,
-  size = 'md',
-  children,
-  className,
-  ...props
-}) => {
-  const defaultIconProps: Partial<Omit<IconProps, 'icon'>> = {
+export const HeaderButton: React.FC<HeaderButtonProps> = ({ text, icon, size = 'md', children, className, ...props }) => {
+  const iconProps: Partial<Omit<IconProps, 'icon'>> = {
     size: (text && size === 'sm') || size === 'sm' ? 10 : 16,
     color: 'white',
   };
-
-  const finalIconProps = { ...defaultIconProps, ...iconProps };
 
   const isIconOnly = !text && !children && icon;
 
@@ -46,7 +35,7 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
 
   const content = (
     <>
-      {icon && <Icon icon={icon} {...finalIconProps} />}
+      {icon && <Icon icon={icon} {...iconProps} />}
       {children}
       {text && <span className="mt-0.5 block text-center text-white">{text}</span>}
     </>
