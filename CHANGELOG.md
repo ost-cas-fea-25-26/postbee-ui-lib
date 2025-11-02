@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.13.0...v1.14.0) (2025-11-02)
+
+
+### Features
+
+* **avatar:** add initial version ([#17](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/17)) ([72a0d58](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/72a0d5879f342c70bd551c62c9a80c37c3713819))
+
 # [1.13.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.12.0...v1.13.0) (2025-11-02)
 
 
