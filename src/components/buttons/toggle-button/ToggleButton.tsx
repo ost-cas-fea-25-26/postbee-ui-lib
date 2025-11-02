@@ -8,8 +8,8 @@ export interface ToggleButtonProps extends React.ButtonHTMLAttributes<HTMLButton
   icon?: IconName;
   text?: string;
   isActive?: boolean;
-  activeClassName?: string; // Eigene Klassen für aktiven Zustand
-  activeIconClassName?: string; // Eigene Klassen für aktives Icon
+  activeClassName?: string;
+  activeIconClassName?: string;
 }
 
 export const ToggleButton: React.FC<ToggleButtonProps> = ({
