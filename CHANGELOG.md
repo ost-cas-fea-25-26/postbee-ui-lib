@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.14.0...v1.14.1) (2025-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update tailwindcss monorepo to v4.1.16 ([#62](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/62)) ([1fdbdab](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/1fdbdab8c1b2cf66defe8f98c400b12be80d8b78))
+
 # [1.14.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.13.0...v1.14.0) (2025-11-02)
 
 
