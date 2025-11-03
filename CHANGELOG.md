@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.16.0...v1.17.0) (2025-11-03)
+
+
+### Features
+
+* add CopyButton ([#68](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/68)) ([ff17873](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/ff1787394e65ba02d60b986a99ffdae355b03d95))
+
 # [1.16.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.15.0...v1.16.0) (2025-11-03)
 
 
