@@ -10,3 +10,10 @@
   /* disable default theme from tailwind */
   --*: initial;
 }
+
+@layer base {
+  html {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
