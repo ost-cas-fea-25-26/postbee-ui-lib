@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.18.0...v1.19.0) (2025-11-03)
+
+
+### Features
+
+* **logo:** add initial version ([#53](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/53)) ([6d1c98a](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/6d1c98aaaaf218c9059d47f76c4365dc78d44af6))
+
 # [1.18.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.17.1...v1.18.0) (2025-11-03)
 
 
