@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.17.1...v1.18.0) (2025-11-03)
+
+
+### Features
+
+* add CommentsButton ([#71](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/71)) ([489ebe4](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/489ebe4ba1db3c4cfbd8031ce15d7d20042c1670))
+
 ## [1.17.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.17.0...v1.17.1) (2025-11-03)
 
 
