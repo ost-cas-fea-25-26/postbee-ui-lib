@@ -27,10 +27,10 @@ export const Logo: React.FC<LogoProps> = ({ logo, title, size = 100, className, 
         width={size}
         height={size}
         className={clsx(className)}
-        // when no title is given, handle the icon as decorative
+        // when no title is given, handle the logo as decorative
         aria-hidden={title ? undefined : 'true'}
         title={title}
-        titleId={title ? `icon-title-${id}` : undefined}
+        titleId={title ? `logo-title-${id}` : undefined}
         role={title ? 'img' : undefined}
         {...props}
       />

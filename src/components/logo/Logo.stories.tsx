@@ -17,7 +17,7 @@ const meta = {
         min: 20,
         max: 200,
       },
-      description: 'Icon size',
+      description: 'Logo size',
     },
   },
   args: {
