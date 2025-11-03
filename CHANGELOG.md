@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.17.0...v1.17.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* fix font-rendering ([#72](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/72)) ([158801b](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/158801b1c5d67d645d3111a0ee52c5a40407959d))
+
 # [1.17.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.16.0...v1.17.0) (2025-11-03)
 
 
