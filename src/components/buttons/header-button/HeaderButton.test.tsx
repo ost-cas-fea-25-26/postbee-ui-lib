@@ -32,19 +32,19 @@ describe('HeaderButton Component', () => {
   it('should apply the correct size classes', () => {
     render(<HeaderButton size="sm">Click Me</HeaderButton>);
     const buttonSm = screen.getByRole('button');
-    expect(buttonSm).toHaveClass('min-w-6');
+    expect(buttonSm).toHaveClass('min-w-12');
 
     cleanup();
 
     render(<HeaderButton size="md">Click Me</HeaderButton>);
     const buttonMd = screen.getByRole('button');
-    expect(buttonMd).toHaveClass('min-w-8');
+    expect(buttonMd).toHaveClass('min-w-14');
 
     cleanup();
 
     render(<HeaderButton size="lg">Click Me</HeaderButton>);
     const buttonLg = screen.getByRole('button');
-    expect(buttonLg).toHaveClass('min-w-10');
+    expect(buttonLg).toHaveClass('min-w-16');
   });
 
   it('should render children instead of text when children exist', () => {
