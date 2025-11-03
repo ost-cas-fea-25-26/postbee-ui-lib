@@ -8,6 +8,7 @@
     <img alt="Coverage" src="https://img.shields.io/badge/coverage-80%25-brightgreen">
     <img alt="Quality Check" src="https://github.com/ost-cas-fea-25-26/postbee-ui-lib/actions/workflows/lint-and-test.yml/badge.svg">
     <img alt="Release" src="https://github.com/ost-cas-fea-25-26/postbee-ui-lib/actions/workflows/release.yml/badge.svg">
+    <img alt="Vercel Deploy" src="https://img.shields.io/github/deployments/ost-cas-fea-25-26/postbee-ui-lib/production?label=vercel&amp;logo=vercel">
     <img alt="npm downloads" src="https://img.shields.io/npm/dm/%40postbee%2Fpostbee-ui-lib.svg?label=downloads&amp;color=blue">
     <img alt="bundle size" src="https://img.shields.io/bundlephobia/minzip/%40postbee%2Fpostbee-ui-lib?label=bundle%20size&amp;color=green">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript">
@@ -160,8 +161,7 @@ npm run storybook
 ## 🔗 Storybook URL
 
 - 🏠 **Local**: `http://localhost:6006` (after running `npm run storybook`)
-
-  - 🌐 **Hosted**: <https://ost-cas-fea-25-26.github.io/postbee-ui-lib/>
+- 🌐 **Hosted (Vercel)**: [https://postbee-ui.vercel.app](https://postbee-ui.vercel.app/?path=/docs/docs-intro--docs)
 
 ## 🤝 Contributing
 
