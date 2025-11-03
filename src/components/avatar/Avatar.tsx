@@ -1,6 +1,8 @@
 import * as React from 'react';
+
 import * as RadixAvatar from '@radix-ui/react-avatar';
 import clsx from 'clsx';
+
 import { IconButton } from '../buttons';
 
 export interface AvatarProps extends React.ComponentPropsWithoutRef<typeof RadixAvatar.Root> {
