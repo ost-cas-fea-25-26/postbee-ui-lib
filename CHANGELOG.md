@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.14.1...v1.15.0) (2025-11-03)
+
+
+### Features
+
+* add ToggleButton ([#64](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/64)) ([303fcad](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/303fcadad646bd8ce2f3aaa2f7e889e2dbcbb9ed))
+
 ## [1.14.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.14.0...v1.14.1) (2025-11-02)
 
 
