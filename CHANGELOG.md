@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.15.0...v1.16.0) (2025-11-03)
+
+
+### Features
+
+* add LikeButton ([#65](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/65)) ([62bf3b3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/62bf3b302540f978950f86439324c67ede962d88))
+
 # [1.15.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.14.1...v1.15.0) (2025-11-03)
 
 
