@@ -6,7 +6,7 @@
     <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-4-38b2ac">
     <img alt="license" src="https://img.shields.io/badge/status-stable-4caf50">
     <img alt="Coverage" src="https://img.shields.io/badge/coverage-80%25-brightgreen">
-    <img alt="Quality Check" src="https://github.com/ost-cas-fea-25-26/postbee-ui-lib/actions/workflows/lint-and-test.yml/badge.svg">
+    <img alt="Quality Check" src="https://github.com/ost-cas-fea-25-26/postbee-ui-lib/actions/workflows/quality.yml/badge.svg">
     <img alt="Release" src="https://github.com/ost-cas-fea-25-26/postbee-ui-lib/actions/workflows/release.yml/badge.svg">
     <img alt="Vercel Deploy" src="https://img.shields.io/github/deployments/ost-cas-fea-25-26/postbee-ui-lib/production?label=vercel&amp;logo=vercel">
     <img alt="npm downloads" src="https://img.shields.io/npm/dm/%40postbee%2Fpostbee-ui-lib.svg?label=downloads&amp;color=blue">
