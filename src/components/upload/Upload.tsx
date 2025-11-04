@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
+
 import { useDropzone } from 'react-dropzone';
-import { useState, useEffect } from 'react';
-import { Button } from '../button';
+
+import { Button } from '../buttons';
 import { Icon } from '../icon';
 
 interface UploadFile {
