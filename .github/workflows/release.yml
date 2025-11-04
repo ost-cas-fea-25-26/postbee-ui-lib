@@ -1,8 +1,12 @@
-name: Release
+name: '🚀 Release'
 
 on:
   push:
     branches: [main]
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   release:
