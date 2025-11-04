@@ -72,6 +72,18 @@ export const Settings: Story = {
   },
 };
 
+export const LogOut: Story = {
+  args: {
+    text: 'Log out',
+    icon: 'log-out',
+  },
+  parameters: {
+    docs: {
+      description: { story: 'HeaderButton example for log out.' },
+    },
+  },
+};
+
 export const Sizes: Story = {
   args: {
     icon: 'edit',
