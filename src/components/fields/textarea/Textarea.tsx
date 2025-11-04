@@ -50,6 +50,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           className={clsx(
             'p-sm text-md bg-secondary-50 text-secondary-700 block h-full w-full rounded-md border font-medium focus:outline-none focus:ring-1',
             'pb-placeholder',
+            'transition duration-300 ease-in-out',
             {
               'pr-11': !!appendInnerIconToRender,
               'border-secondary-200 hover:border-primary focus:ring-primary focus:border-primary': !errorMessage,

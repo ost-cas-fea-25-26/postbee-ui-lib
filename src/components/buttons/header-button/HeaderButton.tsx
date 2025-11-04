@@ -52,7 +52,7 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
           {...iconProps}
           className={clsx({
             'mt-1': text || children,
-            'group-hover:rotate-90 duration-300 ease-in-out transition-transform': iconAnimation === 'rotate',
+            'group-hover:rotate-90 duration-350 ease-in-out transition-transform': iconAnimation === 'rotate',
           })}
         />
       )}
@@ -67,6 +67,7 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
       className={clsx(
         'bg-primary hover:bg-primary-hover flex flex-col group',
         'cursor-pointer items-center justify-center rounded-md px-2',
+        'transition duration-300 ease-in-out group',
         sizeClass,
         className,
       )}

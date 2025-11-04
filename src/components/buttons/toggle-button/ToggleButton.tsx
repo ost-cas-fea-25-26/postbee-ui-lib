@@ -30,6 +30,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
       className={clsx(
         'pb-label-md inline-flex items-center gap-2 rounded-full px-3 py-2 cursor-pointer',
         'disabled:pointer-events-none',
+        'transition duration-300 ease-in-out',
         isActive && (activeClassName || defaultActiveClasses),
         className,
       )}
