@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.19.0...v1.20.0) (2025-11-04)
+
+
+### Features
+
+* add HeaderButton ([#46](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/46)) ([617ade1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/617ade18d08627d80b89b8cac22ed7759d62d6c5))
+
 # [1.19.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.18.0...v1.19.0) (2025-11-03)
 
 
