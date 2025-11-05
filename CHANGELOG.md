@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.20.0...v1.21.0) (2025-11-05)
+
+
+### Features
+
+* animations ([#94](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/94)) ([ee82652](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/ee82652df35aa9efca948cca485c217f50ed86df))
+
 # [1.20.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.19.0...v1.20.0) (2025-11-04)
 
 
