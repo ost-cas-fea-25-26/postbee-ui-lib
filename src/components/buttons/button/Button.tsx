@@ -61,7 +61,8 @@ export const Button: React.FC<ButtonProps> = ({
       type="button"
       disabled={disabled}
       className={clsx(
-        'inline-flex cursor-pointer items-center justify-center font-semibold leading-none transition-colors disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex cursor-pointer items-center justify-center font-semibold leading-none disabled:pointer-events-none disabled:opacity-50',
+        'transition duration-300 ease-in-out',
         isIconOnly ? 'rounded-full' : 'rounded-md',
         variantClasses[variant],
         sizeClasses[size],
