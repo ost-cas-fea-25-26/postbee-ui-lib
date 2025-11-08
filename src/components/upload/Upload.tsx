@@ -53,13 +53,13 @@ export const Upload = () => {
           } hover:border-secondary-400 hover:bg-secondary-50 cursor-pointer`,
         })}
       >
-        <input {...getInputProps()} />
+        <input {...getInputProps()} aria-label="Upload files" />
         <div className="flex flex-col items-center justify-center space-y-3">
           <Icon icon="upload" className="text-secondary-500" size={28} />
           <p className="text-secondary-600 font-medium">
             {isDragActive ? 'Drop your files here' : 'Drag & drop files here'}
           </p>
-          <p className="text-secondary-400 text-sm">or use the button below</p>
+          <p className="text-secondary-500 text-sm">or use the button below</p>
         </div>
       </div>
 
@@ -74,19 +74,22 @@ export const Upload = () => {
       {files.length > 0 && (
         <div className="rounded-lg border bg-white p-4 shadow-sm">
           <h4 className="text-secondary-700 mb-3 text-sm font-semibold">Uploaded Files</h4>
-          <ul className="divide-secondary-100 divide-y">
+          <ul className="divide-secondary-100 divide-y" role="list">
             {files.map((item, idx) => (
-              <li key={idx} className="flex items-center justify-between gap-4 py-2">
+              <li key={idx} className="flex items-center justify-between gap-4 py-2" role="listitem">
                 <div className="flex min-w-0 items-center gap-3">
                   {/* Preview or icon */}
                   {item.preview ? (
                     <img
                       src={item.preview}
-                      alt={item.file.name}
+                      alt={`Preview of ${item.file.name}`}
                       className="h-10 w-10 flex-shrink-0 rounded-md border object-cover"
                     />
                   ) : (
-                    <div className="bg-secondary-50 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md border">
+                    <div
+                      className="bg-secondary-50 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md border"
+                      aria-hidden="true"
+                    >
                       <Icon icon="upload" className="text-secondary-500" size={18} />
                     </div>
                   )}
@@ -108,7 +111,8 @@ export const Upload = () => {
                 <button
                   type="button"
                   onClick={() => removeFile(idx)}
-                  className="text-error cursor-pointer text-xs font-medium"
+                  className="text-error hover:text-error/80 cursor-pointer text-xs font-medium transition-colors"
+                  aria-label={`Remove ${item.file.name}`}
                 >
                   Remove
                 </button>
