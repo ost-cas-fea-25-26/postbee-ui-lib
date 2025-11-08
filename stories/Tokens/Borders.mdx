@@ -4,49 +4,26 @@ import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
 
 # Borders
 
-Borders are visual boundaries that help define, separate, and structure elements within an interface. They enhance clarity, emphasize hierarchy, and contribute to the overall visual rhythm of a layout.
+These are the border-specific design tokens and utilities used by the library. They establish a consistent vocabulary for border widths, semantic border colors, and corner radii so components (cards, inputs, buttons, separators, etc.) share uniform edge treatments. Use these tokens to ensure predictable visual hierarchy, easier theming, and simpler maintenance across the codebase.
 
----
-
-## Border Width
-
-Border widths establish visual weight and prominence. Thicker borders can draw attention or separate key sections, while thinner ones provide subtle separation.
-
-<Unstyled>
-    <div className="flex flex-wrap items-center gap-6">
-        {[
-            { width: '1px', class: 'border-1' },
-            { width: '2px', class: 'border-2' },
-            { width: '3px', class: 'border-3' },
-            { width: '4px', class: 'border-4' },
-            { width: '6px', class: 'border-6' },
-        ].map(({ width, class: cls }) => (
-            <div key={width} className="flex flex-col items-center">
-                <div className={`h-xxl w-xxl rounded border ${cls} border-secondary-100 bg-primary-200`}></div>
-                <span className="mt-2 text-sm text-secondary-600">{width}</span>
-            </div>
-        ))}
-    </div>
-</Unstyled>
-
----
+<br />
 
 ## Border Radius
 
-Border radii define the curvature of corners. Using different radius sizes can help convey brand personality—sharp corners feel modern and crisp, while rounded ones feel friendly and approachable.
+Border radii are considered border-specific tokens — they define corner curvature and should be selected to match component purpose and visual hierarchy.
 
 <Unstyled>
     <div className="flex flex-wrap items-center gap-6">
         {[
-            { label: 'None', class: '' },
-            { label: 'Small — rounded-s', class: 'rounded-s' },
-            { label: 'Medium — rounded-m', class: 'rounded-m' },
-            { label: 'Large — rounded-l', class: 'rounded-l' },
-            { label: 'Full — rounded-full', class: 'rounded-full' },
+            { label: 'None\nrounded-0', class: '' },
+            { label: 'Small\nrounded-sm', class: 'rounded-sm' },
+            { label: 'Medium\nrounded-md', class: 'rounded-md' },
+            { label: 'Large\nrounded-lg', class: 'rounded-lg' },
+            { label: 'Full\nrounded-full', class: 'rounded-full' },
         ].map(({ label, class: cls }) => (
             <div key={label} className="flex flex-col items-center">
-                <div className={`h-xxl w-xxl border border-3 border-secondary-100 bg-primary-200 ${cls}`}></div>
-                <span className="mt-2 text-sm text-secondary-600">{label}</span>
+                <div className={`h-xxl w-xxl border-3 border-primary-400 bg-primary-200 ${cls}`}></div>
+                <span className="mt-2 text-xs text-base whitespace-pre text-center">{label}</span>
             </div>
         ))}
     </div>

@@ -1,0 +1,73 @@
+import { Meta, Story, Unstyled } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Tokens/Typography"
+  parameters={{
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/nsXR2h0KwciWpuwKRD58FX/Mumble?node-id=407-112&t=cunwm1yb3j7KAYAN-4',
+    },
+  }}
+/>
+
+# Typography
+
+This page showcases the typography tokens available in the Postbee UI Library.
+
+## Available Text Styles
+
+<Unstyled>
+  <div className="my-8">
+    <div className="grid gap-4 text-base">
+      {[
+        { class: 'pb-h1', label: 'Heading 1' },
+        { class: 'pb-h2', label: 'Heading 2' },
+        { class: 'pb-h3', label: 'Heading 3' },
+        { class: 'pb-h4', label: 'Heading 4' },
+        { class: 'pb-paragraph-lg', label: 'Paragraph Large' },
+        { class: 'pb-paragraph-md', label: 'Paragraph Medium' },
+        { class: 'pb-label-xl', label: 'Label XL' },
+        { class: 'pb-label-lg', label: 'Label Large' },
+        { class: 'pb-label-md', label: 'Label Medium' },
+        { class: 'pb-label-sm', label: 'Label Small' },
+      ].map(({ class: className, label }) => (
+        <div
+          key={className}
+          className="border-secondary-200 flex flex-col border-b pb-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div className={className}>{label}</div>
+          <div className="text-base mt-2">
+            <code>{className}</code>
+          </div>
+        </div>
+      ))}
+
+      {/* Special handling for placeholder style */}
+      <div className="border-secondary-200 flex flex-col border-b pb-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex-1">
+          <input
+            type="text"
+            placeholder="Placeholder Text"
+            className="pb-placeholder border rounded-sm px-3 py-2"
+          />
+        </div>
+        <div className="text-base mt-2 sm:ml-4">
+          <code>pb-placeholder</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</Unstyled>
+
+## Usage
+
+To use these typography styles, simply add the corresponding class name to your element:
+
+```jsx
+<h1 className="pb-h1">This is a heading 1</h1>
+<p className="pb-paragraph-md">This is a medium paragraph</p>
+<span className="pb-label-sm">This is a small label</span>
+<input placeholder="Placeholder text" className="pb-placeholder" />
+```
+
+Each typography token is designed to maintain consistent text styling across your application.
