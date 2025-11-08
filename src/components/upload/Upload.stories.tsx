@@ -36,24 +36,3 @@ export const Default: Story = {
     },
   },
 };
-
-// Upload with preloaded files (example)
-export const WithFiles: Story = {
-  name: 'With Files',
-  render: () => {
-    // Just render the component with a note about simulated files
-    return (
-      <div className="p-4">
-        <Upload />
-        <p className="text-secondary-400 mt-4 text-center text-xs">(Simulated files can be added via the Upload button)</p>
-      </div>
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Demonstrates the upload component usage; users can add files via the button.',
-      },
-    },
-  },
-};
