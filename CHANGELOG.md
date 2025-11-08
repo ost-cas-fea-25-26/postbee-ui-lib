@@ -1,3 +1,11 @@
+## [1.21.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.21.1...v1.21.2) (2025-11-08)
+
+
+### Bug Fixes
+
+* **Avatar:** fix editable button positions on smaller sizes ([#102](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/102)) ([b6ac80f](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/b6ac80f8ae7ffdf5fd3265f142c82bdace8acf19))
+* **colors:** use a better contrast for the error color (a11y) ([#101](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/101)) ([1829ab5](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/1829ab5a2bdda6eff052c6c8e46c09d8ee413745))
+
 ## [1.21.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.21.0...v1.21.1) (2025-11-07)
 
 
