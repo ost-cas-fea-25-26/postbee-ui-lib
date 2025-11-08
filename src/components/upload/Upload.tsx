@@ -48,17 +48,15 @@ export const Upload = () => {
       {/* Drag-and-drop area */}
       <div
         {...getRootProps({
-          className: `rounded-2xl border-2 border-dashed px-8 py-20 text-center transition-all duration-200 ${
+          className: `cursor-default rounded-md border-2 border-dashed px-8 py-20 text-center transition-all duration-200 ${
             isDragActive ? 'border-secondary-500 bg-secondary-50' : 'border-secondary-300 bg-secondary-100/50'
-          } hover:border-secondary-400 hover:bg-secondary-50 cursor-pointer`,
+          }`,
         })}
       >
         <input {...getInputProps()} aria-label="Upload files" />
         <div className="flex flex-col items-center justify-center space-y-3">
           <Icon icon="upload" className="text-secondary-500" size={28} />
-          <p className="text-secondary-600 font-medium">
-            {isDragActive ? 'Drop your files here' : 'Drag & drop files here'}
-          </p>
+          <p className="text-base">{isDragActive ? 'Drop your files here' : 'Drag & drop files here'}</p>
           <p className="text-secondary-500 text-sm">or use the button below</p>
         </div>
       </div>
@@ -72,9 +70,9 @@ export const Upload = () => {
 
       {/* File list */}
       {files.length > 0 && (
-        <div className="rounded-lg border bg-white p-4 shadow-sm">
-          <h4 className="text-secondary-700 mb-3 text-sm font-semibold">Uploaded Files</h4>
-          <ul className="divide-secondary-100 divide-y" role="list">
+        <div className="rounded-md border border-secondary-300 bg-white p-4 shadow-sm">
+          <h4 className="text-base mb-3 text-sm font-semibold">Uploaded Files</h4>
+          <ul className="divide-secondary-100 divide-y">
             {files.map((item, idx) => (
               <li key={idx} className="flex items-center justify-between gap-4 py-2" role="listitem">
                 <div className="flex min-w-0 items-center gap-3">
@@ -83,27 +81,24 @@ export const Upload = () => {
                     <img
                       src={item.preview}
                       alt={`Preview of ${item.file.name}`}
-                      className="h-10 w-10 flex-shrink-0 rounded-md border object-cover"
+                      className="h-10 w-10 shrink-0 rounded-sm border-secondary-300 border object-cover"
                     />
                   ) : (
-                    <div
-                      className="bg-secondary-50 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md border"
-                      aria-hidden="true"
-                    >
-                      <Icon icon="upload" className="text-secondary-500" size={18} />
+                    <div className="bg-secondary-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border">
+                      <Icon icon="upload" className="text-base" size={18} />
                     </div>
                   )}
 
                   {/* File details */}
                   <div className="min-w-0">
                     <p
-                      className="text-secondary-700 truncate text-sm font-medium"
+                      className="text-base truncate text-xs font-medium"
                       style={{ maxWidth: '200px' }}
                       title={item.file.name}
                     >
                       {item.file.name}
                     </p>
-                    <p className="text-secondary-400 text-xs">{(item.file.size / 1024).toFixed(1)} KB</p>
+                    <p className="text-secondary-500 text-xs">{(item.file.size / 1024).toFixed(1)} KB</p>
                   </div>
                 </div>
 
