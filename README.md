@@ -161,7 +161,7 @@ npm run storybook
 ## 🔗 Storybook URL
 
 - 🏠 **Local**: `http://localhost:6006` (after running `npm run storybook`)
-- 🌐 **Hosted (Vercel)**: [https://postbee-ui.vercel.app](https://postbee-ui-lib.vercel.app/?path=/docs/docs-intro--docs)
+- 🌐 **Hosted (Vercel)**: [https://postbee-ui-lib.vercel.app](https://postbee-ui-lib.vercel.app/?path=/docs/docs-intro--docs)
 
 ## 🤝 Contributing
 
