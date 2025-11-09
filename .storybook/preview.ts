@@ -4,6 +4,13 @@ import './preview.css';
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Docs', ['Intro'], 'Tokens'],
+        locales: '',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
