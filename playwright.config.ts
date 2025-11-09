@@ -2,10 +2,14 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  webServer: {
+    command: 'npm run storybook',
+    url: 'http://localhost:6006',
+    reuseExistingServer: !process.env.CI,
+  },
   use: {
-    baseURL: 'http://localhost:6006', // Storybook or app base
+    baseURL: 'http://localhost:6006',
     headless: true,
-    screenshot: 'only-on-failure',
   },
   expect: {
     toHaveScreenshot: { threshold: 0.2 },
