@@ -7,7 +7,7 @@ const preview: Preview = {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['Docs', ['Intro']],
+        order: ['Docs', ['Intro'], 'Tokens'],
         locales: '',
       },
     },
