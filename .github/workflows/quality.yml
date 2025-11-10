@@ -24,7 +24,7 @@ jobs:
       matrix:
         node-version: [22, 24]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
@@ -44,7 +44,7 @@ jobs:
       matrix:
         node-version: [22, 24]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
@@ -60,7 +60,7 @@ jobs:
     timeout-minutes: 10
     needs: lint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -76,7 +76,7 @@ jobs:
     timeout-minutes: 15
     needs: lint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -93,7 +93,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 24
