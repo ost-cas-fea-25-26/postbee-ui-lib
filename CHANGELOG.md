@@ -1,3 +1,15 @@
+# [1.23.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.22.1...v1.23.0) (2025-11-14)
+
+
+### Bug Fixes
+
+* **icons:** include icons in the final bundle ([#115](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/115)) ([0d9d0a9](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/0d9d0a98eb98e57c42504d65e35284b6b0a67050))
+
+
+### Features
+
+* release ([c3c8e5c](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/c3c8e5c9f3dd2ffd0db6ac26059cfa6c43cefc6f))
+
 ## [1.22.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.22.0...v1.22.1) (2025-11-09)
 
 
