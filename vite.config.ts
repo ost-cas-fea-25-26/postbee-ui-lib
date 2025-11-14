@@ -16,6 +16,7 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
+      external: ['react', 'react-dom'],
       output: {
         entryFileNames: `index.js`,
         format: 'es',
