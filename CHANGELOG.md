@@ -1,3 +1,11 @@
+## [1.24.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.24.0...v1.24.1) (2025-11-14)
+
+
+### Bug Fixes
+
+* build with correct exports ([4ee969e](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/4ee969ee8dacd168e0ebc8517502cf83ad8bd7cb))
+* build with correct exports ([2979df2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/2979df2497ef3900d5fb1f3360e7047abc3bdb12))
+
 # [1.24.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.23.0...v1.24.0) (2025-11-14)
 
 
