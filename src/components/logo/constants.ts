@@ -1,13 +1,13 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppVariant01 from './logos/app-variant-01.svg?react';
-import AppVariant02 from './logos/app-variant-02.svg?react';
-import Gradient01 from './logos/gradient-01.svg?react';
-import Gradient02 from './logos/gradient-02.svg?react';
-import Mumble from './logos/mumble.svg?react';
-import Violet01 from './logos/violet-01.svg?react';
-import Violet02 from './logos/violet-02.svg?react';
-import White01 from './logos/white-01.svg?react';
-import White02 from './logos/white-02.svg?react';
+import AppVariant01 from '/images/svg/logos/app-variant-01.svg?react';
+import AppVariant02 from '/images/svg/logos/app-variant-02.svg?react';
+import Gradient01 from '/images/svg/logos/gradient-01.svg?react';
+import Gradient02 from '/images/svg/logos/gradient-02.svg?react';
+import Mumble from '/images/svg/logos/mumble.svg?react';
+import Violet01 from '/images/svg/logos/violet-01.svg?react';
+import Violet02 from '/images/svg/logos/violet-02.svg?react';
+import White01 from '/images/svg/logos/white-01.svg?react';
+import White02 from '/images/svg/logos/white-02.svg?react';
 
 export const LOGO_COMPONENTS = {
   'app-variant-01': AppVariant01,
