@@ -5,7 +5,7 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { Input } from './Input';
 
-const meta = {
+const meta: Meta<typeof Input> = {
   title: 'Components/Fields/Input',
   component: Input,
   parameters: {

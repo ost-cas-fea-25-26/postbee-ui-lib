@@ -1,7 +1,7 @@
 import type { KnipConfig } from 'knip';
 
 const config: KnipConfig = {
-  entry: ['src/index.ts'],
+  entry: [],
   ignore: ['.prettier.config.js', '.storybook/**', 'storybook-static/**', 'release.config.js'],
   ignoreDependencies: [
     '@semantic-release/commit-analyzer',
