@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.23.0...v1.24.0) (2025-11-14)
+
+
+### Features
+
+* build and bundle with vite to support svg components ([#117](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/117)) ([f57219a](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/f57219a47e7efe8a67cae9528c0eda514f0fa42c))
+
 # [1.23.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.22.1...v1.23.0) (2025-11-14)
 
 
