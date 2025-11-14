@@ -33,7 +33,6 @@ export default defineConfig({
     }),
     dts({
       tsconfigPath: 'tsconfig.build.json',
-      insertTypesEntry: true,
     }),
   ],
 });

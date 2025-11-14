@@ -21,8 +21,6 @@ export default defineConfig(() =>
         environment: 'jsdom',
         projects: [
           {
-            // Remove or fix extends:
-            // extends: true,  <-- remove or set properly
             plugins: [
               storybookTest({
                 configDir: path.join(dirname, '.storybook'),
