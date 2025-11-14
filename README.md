@@ -1,6 +1,6 @@
 <div align="center">
   <img src="public/images/PostBee-Logo.png" alt="PostBee Logo" width="420">
-  <h1>PostBee UI Library 📚</h1>
+  <h1>PostBee UI Library</h1>
   <p><a href="https://www.npmjs.com/package/@postbee/postbee-ui-lib"><img alt="npm version" src="https://img.shields.io/npm/v/%40postbee%2Fpostbee-ui-lib.svg?label=npm&amp;color=cb2d6f"></a>
     <img alt="react" src="https://img.shields.io/badge/react-19-61dafb">
     <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-4-38b2ac">
@@ -24,7 +24,7 @@
 
 > A modern, accessible React component library powered by Tailwind CSS 4, Radix Primitives, and TypeScript. Batteries included: theming, icons, tests, and Storybook docs.
 
---------------------------------------------------------------------------------
+---
 
 # ✨ Features
 
@@ -42,14 +42,14 @@ npm install @postbee/postbee-ui-lib
 
 ## 🚀 Quick Start
 
-1) Import the base styles once in your app entry:
+1. Import the base styles once in your app entry:
 
 ```typescript
 // e.g., src/main.tsx or _app.tsx
 import '@postbee/postbee-ui-lib/styles';
 ```
 
-2) Use components:
+2. Use components:
 
 ```tsx
 import { Button, Icon, Paragraph } from '@postbee/postbee-ui-lib';
@@ -97,23 +97,23 @@ Import from the package root:
 import {
   Avatar,
   Button,
-  IconButton,
-  TextButton,
-  ToggleButton,
-  LikeButton,
   CommentsButton,
   CopyButton,
   Dialog,
-  Input,
-  Textarea,
   ErrorMessage,
+  Heading,
   Icon,
+  IconButton,
+  Input,
+  Label,
+  LikeButton,
   Link,
   Logo,
-  Tabs,
-  Heading,
-  Label,
   Paragraph,
+  Tabs,
+  TextButton,
+  Textarea,
+  ToggleButton,
 } from '@postbee/postbee-ui-lib';
 ```
 
@@ -180,7 +180,7 @@ npm run storybook
 - ⚡ **Vitest**: `https://vitest.dev`
 - 🚀 **semantic-release**: `https://semantic-release.gitbook.io/semantic-release`
 
---------------------------------------------------------------------------------
+---
 
 ## 👥 Contributors
 
