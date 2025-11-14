@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import dts from 'unplugin-dts/vite';
@@ -35,4 +36,5 @@ export default defineConfig({
       tsconfigPath: 'tsconfig.build.json',
     }),
   ],
+  test: {},
 });
