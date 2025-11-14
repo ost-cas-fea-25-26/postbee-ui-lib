@@ -36,15 +36,15 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     },
     "./styles": "./dist/styles/index.css",
     "./styles/*": "./dist/styles/*",
     "./tailwind.config.ts": "./dist/tailwind.config.ts"
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "sideEffects": [
     "dist/styles/*.css"
   ],
