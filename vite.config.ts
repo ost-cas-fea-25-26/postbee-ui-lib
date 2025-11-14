@@ -12,6 +12,20 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  build: {
+    target: 'esnext',
+    lib: {
+      entry: 'src/index.ts',
+      formats: ['es'],
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
+    },
+    rollupOptions: {
+      output: {
+        entryFileNames: `index.js`,
+        format: 'es',
+      },
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
