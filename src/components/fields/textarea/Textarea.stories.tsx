@@ -5,7 +5,7 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { Textarea } from './Textarea';
 
-const meta = {
+const meta: Meta<typeof Textarea> = {
   title: 'Components/Fields/Textarea',
   component: Textarea,
   parameters: {

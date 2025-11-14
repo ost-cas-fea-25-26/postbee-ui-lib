@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "target": "ES6",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "types": ["react", "react-dom"],
     "rootDir": "src",
     "baseUrl": ".",
     "esModuleInterop": true,
     "declaration": true,
-    "outDir": "dist/cjs",
-    "declarationDir": "dist/types"
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "noEmit": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
-  "files": ["src/index.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.jsx"],
+  "exclude": ["node_modules", "dist", "src/**/*.stories.*", "src/stories/*"]
 }
