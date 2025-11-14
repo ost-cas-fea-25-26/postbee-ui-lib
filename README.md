@@ -1,6 +1,6 @@
 <div align="center">
   <img src="public/images/PostBee-Logo.png" alt="PostBee Logo" width="420">
-  <h1>PostBee UI Library</h1>
+  <h1>PostBee UI Library 📚</h1>
   <p><a href="https://www.npmjs.com/package/@postbee/postbee-ui-lib"><img alt="npm version" src="https://img.shields.io/npm/v/%40postbee%2Fpostbee-ui-lib.svg?label=npm&amp;color=cb2d6f"></a>
     <img alt="react" src="https://img.shields.io/badge/react-19-61dafb">
     <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-4-38b2ac">
