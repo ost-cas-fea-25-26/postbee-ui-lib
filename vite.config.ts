@@ -13,7 +13,6 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       formats: ['es'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
