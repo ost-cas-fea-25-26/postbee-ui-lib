@@ -71,12 +71,17 @@ jobs:
         run: npm ci
       - name: Build package (ESM/CJS + copy assets)
         run: npm run build
+      - name: Upload built library
+        uses: actions/upload-artifact@v4
+        with:
+          name: library-build
+          path: dist
 
   build_storybook:
     name: '📖 Build Storybook'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    needs: lint
+    needs: [lint, build_lib]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
