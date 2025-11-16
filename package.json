@@ -1,7 +1,7 @@
 {
   "name": "@postbee/postbee-ui-lib",
   "private": false,
-  "version": "1.25.1",
+  "version": "1.26.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.25.1...v1.26.0) (2025-11-16)
+
+
+### Features
+
+* add storybook a11y tests ([#120](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/120)) ([c970258](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/c9702581098205b44e238cc4e41cf093be725736))
+
 ## [1.25.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.25.0...v1.25.1) (2025-11-16)
 
 
