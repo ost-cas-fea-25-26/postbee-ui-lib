@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storybook-test-a11y": "npm run build-storybook && test-storybook --url http://127.0.0.1:6007",
+    "storybook-test-a11y": "npm run build-storybook && test-storybook --url http://localhost:6007",
     "storybook-test-a11y-ci": "npm run storybook-test-a11y -- --ci",
     "check:unused": "knip",
     "type-check": "tsc --noEmit",
