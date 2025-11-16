@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.25.0...v1.25.1) (2025-11-16)
+
+
+### Bug Fixes
+
+* **types:** bundle all types in one file ([#119](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/119)) ([b8b7661](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/b8b7661d43ec948ca818d95f937c5054862ca305))
+
 # [1.25.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.24.1...v1.25.0) (2025-11-14)
 
 
