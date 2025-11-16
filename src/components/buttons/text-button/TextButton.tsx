@@ -23,7 +23,7 @@ export const TextButton: React.FC<TextButtonProps> = ({
 }) => {
   const variantClasses = {
     primary: 'text-primary pb-label-sm hover:text-primary-900',
-    secondary: 'text-secondary-400 pb-label-sm hover:text-secondary-600 ',
+    secondary: 'text-secondary-500 pb-label-sm hover:text-secondary-600 ',
   };
 
   return (
