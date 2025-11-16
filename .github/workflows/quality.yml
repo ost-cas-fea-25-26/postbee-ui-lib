@@ -16,41 +16,33 @@ concurrency:
 
 jobs:
   lint:
-    name: '🔎 Lint (Node ${{ matrix.node-version }})'
+    name: '🔎 Lint (Node from .nvmrc)'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
       - name: Lint
         run: npm run lint
 
   unit_tests:
-    name: '🧪 Unit Tests (Node ${{ matrix.node-version }})'
+    name: '🧪 Unit Tests'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: lint
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
         run: npx playwright install
       - name: Test
@@ -65,26 +57,40 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
       - name: Build package (ESM/CJS + copy assets)
         run: npm run build
+      - name: List dist content
+        run: ls -la dist
+      - name: Upload built library
+        uses: actions/upload-artifact@v4
+        with:
+          name: library-build
+          path: dist
 
   build_storybook:
     name: '📖 Build Storybook'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    needs: lint
+    needs: [lint, build_lib]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
+      - name: Download built library
+        uses: actions/download-artifact@v4
+        with:
+          name: library-build
+          path: dist
+      - name: List dist content
+        run: ls -la dist
       - name: Build Storybook static site
         run: npm run build-storybook
 
@@ -98,10 +104,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
       - name: Run coverage
         run: npm run coverage
       - name: Upload coverage artifact

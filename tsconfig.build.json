@@ -10,11 +10,10 @@
     "esModuleInterop": true,
     "declaration": true,
     "outDir": "dist",
-    "declarationDir": "dist/types",
     "noEmit": false,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.jsx"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "src/**/*.stories.*", "src/stories/*"]
 }

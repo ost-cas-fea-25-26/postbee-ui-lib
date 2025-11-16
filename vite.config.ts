@@ -1,8 +1,8 @@
 /// <reference types="vitest/config" />
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import dts from 'unplugin-dts/vite';
 import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
@@ -13,7 +13,6 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       formats: ['es'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -35,6 +34,7 @@ export default defineConfig({
     }),
     dts({
       tsconfigPath: 'tsconfig.build.json',
+      rollupTypes: true,
     }),
   ],
   test: {},
