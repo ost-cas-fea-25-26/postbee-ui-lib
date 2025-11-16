@@ -48,7 +48,7 @@ export const IconOnly: Story = {
 
 export const WithAvatar: Story = {
   render: (args) => (
-    <HeaderButton {...args}>
+    <HeaderButton aria-label="My Avatar" {...args}>
       <Avatar size="sm" />
     </HeaderButton>
   ),
