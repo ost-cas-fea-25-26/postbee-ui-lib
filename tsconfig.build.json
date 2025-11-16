@@ -10,7 +10,6 @@
     "esModuleInterop": true,
     "declaration": true,
     "outDir": "dist",
-    "declarationDir": "dist/types",
     "noEmit": false,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
