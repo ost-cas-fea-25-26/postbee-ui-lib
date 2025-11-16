@@ -63,6 +63,8 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Build package (ESM/CJS + copy assets)
         run: npm run build
+      - name: List dist content
+        run: ls -la dist
       - name: Upload built library
         uses: actions/upload-artifact@v4
         with:
