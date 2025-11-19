@@ -1,0 +1,30 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Borders" />
+
+# Borders
+
+These are the border-specific design tokens and utilities used by the library. They establish a consistent vocabulary for border widths, semantic border colors, and corner radii so components (cards, inputs, buttons, separators, etc.) share uniform edge treatments. Use these tokens to ensure predictable visual hierarchy, easier theming, and simpler maintenance across the codebase.
+
+<br />
+
+## Border Radius
+
+Border radii are considered border-specific tokens — they define corner curvature and should be selected to match component purpose and visual hierarchy.
+
+<Unstyled>
+    <div className="flex flex-wrap items-center gap-6">
+        {[
+            { label: 'None\nrounded-0', class: '' },
+            { label: 'Small\nrounded-sm', class: 'rounded-sm' },
+            { label: 'Medium\nrounded-md', class: 'rounded-md' },
+            { label: 'Large\nrounded-lg', class: 'rounded-lg' },
+            { label: 'Full\nrounded-full', class: 'rounded-full' },
+        ].map(({ label, class: cls }) => (
+            <div key={label} className="flex flex-col items-center">
+                <div className={`h-xxl w-xxl border-3 border-primary-500 bg-primary-200 ${cls}`}></div>
+                <span className="mt-2 text-xs text-base whitespace-pre text-center">{label}</span>
+            </div>
+        ))}
+    </div>
+</Unstyled>

@@ -1,9 +1,16 @@
 import type { Preview } from '@storybook/react-vite';
 
-import '../src/styles/tailwind.css';
+import './preview.css';
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Docs', ['Intro'], 'Tokens'],
+        locales: '',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -18,6 +25,10 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+};
+
+export const parameters = {
+  layout: 'centered',
 };
 
 export default preview;

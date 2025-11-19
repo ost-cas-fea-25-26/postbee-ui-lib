@@ -1,0 +1,64 @@
+@theme {
+  --color-primary-50: oklch(96.9% 0.016 293.756);
+  --color-primary-100: oklch(94.3% 0.029 294.588);
+  --color-primary-200: oklch(89.4% 0.057 293.283);
+  --color-primary-300: oklch(81.1% 0.111 293.571);
+  --color-primary-400: oklch(70.2% 0.183 293.541);
+  --color-primary-500: oklch(60.6% 0.25 292.717);
+  --color-primary-600: oklch(54.1% 0.281 293.009);
+  --color-primary-700: oklch(49.1% 0.27 292.581);
+  --color-primary-800: oklch(43.2% 0.232 292.759);
+  --color-primary-900: oklch(38% 0.189 293.745);
+  --color-primary-950: oklch(28.3% 0.141 291.089);
+
+  --color-secondary-50: oklch(98.4% 0.003 247.858);
+  --color-secondary-100: oklch(96.8% 0.007 247.896);
+  --color-secondary-200: oklch(92.9% 0.013 255.508);
+  --color-secondary-300: oklch(86.9% 0.022 252.894);
+  --color-secondary-400: oklch(70.4% 0.04 256.788);
+  --color-secondary-500: oklch(55.4% 0.046 257.417);
+  --color-secondary-600: oklch(44.6% 0.043 257.281);
+  --color-secondary-700: oklch(37.2% 0.044 257.287);
+  --color-secondary-800: oklch(27.9% 0.041 260.031);
+  --color-secondary-900: oklch(20.8% 0.042 265.755);
+  --color-secondary-950: oklch(12.9% 0.042 264.695);
+
+  --color-tertiary-50: oklch(97.1% 0.014 343.198);
+  --color-tertiary-100: oklch(94.8% 0.028 342.258);
+  --color-tertiary-200: oklch(89.9% 0.061 343.231);
+  --color-tertiary-300: oklch(82.3% 0.12 346.018);
+  --color-tertiary-400: oklch(71.8% 0.202 349.761);
+  --color-tertiary-500: oklch(65.6% 0.241 354.308);
+  --color-tertiary-600: oklch(59.2% 0.249 0.584);
+  --color-tertiary-700: oklch(52.5% 0.223 3.958);
+  --color-tertiary-800: oklch(45.9% 0.187 3.815);
+  --color-tertiary-900: oklch(40.8% 0.153 2.432);
+  --color-tertiary-950: oklch(28.4% 0.109 3.907);
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-error: #eb0000;
+
+  --color-base: var(--color-secondary-600);
+
+  --color-primary: var(--color-primary-600);
+  --color-primary-foreground: var(--color-white);
+  --color-primary-hover: var(--color-primary-700);
+  --color-primary-hover-outline: var(--color-primary-100);
+  --color-primary-active: var(--color-primary-700);
+  --color-primary-active-outline: var(--color-primary-200);
+
+  --color-secondary: var(--color-secondary-600);
+  --color-secondary-foreground: var(--color-white);
+  --color-secondary-hover: var(--color-secondary-700);
+  --color-secondary-hover-outline: var(--color-secondary-100);
+  --color-secondary-active: var(--color-secondary-700);
+  --color-secondary-active-outline: var(--color-secondary-200);
+
+  --color-tertiary: var(--color-tertiary-500);
+  --color-tertiary-foreground: var(--color-white);
+  --color-tertiary-hover: var(--color-tertiary-500);
+  --color-tertiary-hover-outline: var(--color-primary-100);
+  --color-tertiary-active: var(--color-tertiary-500);
+  --color-tertiary-active-outline: var(--color-primary-200);
+}
