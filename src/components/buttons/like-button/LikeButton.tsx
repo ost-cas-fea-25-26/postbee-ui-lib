@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import type { IconName } from '../../icon';
 import { ToggleButton, type ToggleButtonProps } from '../toggle-button';
@@ -22,12 +22,6 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
   const [isActive, setIsActive] = useState(count > 0 || initialIsLiked);
   const [showLikedText, setShowLikedText] = useState(false);
   const [disabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    setLikesCount(count);
-    setIsLiked(initialIsLiked);
-    setIsActive(count > 0 || initialIsLiked);
-  }, [count, initialIsLiked]);
 
   const handleClick = () => {
     if (disabled) return;
