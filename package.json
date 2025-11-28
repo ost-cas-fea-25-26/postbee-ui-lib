@@ -18,7 +18,8 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx && npm run type-check && npm run check:unused",
     "format": "prettier --write .",
-    "test": "vitest run",
+    "svgr:icons": "rm -rf ./src/components/icon/svg-components && svgr ./src/components/icon/svg --out-dir ./src/components/icon/svg-components",
+    "svgr:logos": "rm -rf ./src/components/logo/svg-components && svgr ./src/components/logo/logos --out-dir ./src/components/logo/svg-components",
     "coverage": "vitest run --coverage"
   },
   "release": {
@@ -79,6 +80,7 @@
     "@storybook/addon-docs": "10.0.7",
     "@storybook/addon-vitest": "^10.0.7",
     "@storybook/react-vite": "10.0.7",
+    "@svgr/cli": "^8.1.0",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
