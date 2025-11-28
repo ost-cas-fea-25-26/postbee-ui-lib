@@ -9,7 +9,8 @@
     "clean": "rm -rf ./dist",
     "copy:styles": "cp -r ./src/styles ./dist/styles",
     "copy:tailwind": "cp ./tailwind.config.ts ./dist",
-    "build": "vite build && npm run copy:tailwind && npm run copy:styles",
+    "build:js": "tsc -p tsconfig.esm.json",
+    "build": "npm run clean && npm run build:js && npm run copy:styles",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -40,15 +41,13 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./styles": "./dist/styles/index.css",
-    "./styles/*": "./dist/styles/*",
-    "./tailwind.config.ts": "./dist/tailwind.config.ts"
+    "./styles/*": "./dist/styles/*"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "sideEffects": [
     "dist/styles/*.css"
   ],
