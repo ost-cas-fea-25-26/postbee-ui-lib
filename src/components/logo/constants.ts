@@ -1,22 +1,25 @@
-/// <reference types="vite-plugin-svgr/client" />
-import AppVariant01 from './logos/app-variant-01.svg?react';
-import AppVariant02 from './logos/app-variant-02.svg?react';
-import Gradient01 from './logos/gradient-01.svg?react';
-import Gradient02 from './logos/gradient-02.svg?react';
-import Mumble from './logos/mumble.svg?react';
-import Violet01 from './logos/violet-01.svg?react';
-import Violet02 from './logos/violet-02.svg?react';
-import White01 from './logos/white-01.svg?react';
-import White02 from './logos/white-02.svg?react';
+import type { FC, SVGProps } from 'react';
+
+import AppVariant01 from './svg-components/AppVariant01';
+import AppVariant02 from './svg-components/AppVariant02';
+import Gradient01 from './svg-components/Gradient01';
+import Gradient02 from './svg-components/Gradient02';
+import Mumble from './svg-components/Mumble';
+import Violet01 from './svg-components/Violet01';
+import Violet02 from './svg-components/Violet02';
+import White01 from './svg-components/White01';
+import White02 from './svg-components/White02';
+
+type LogoComponent = FC<SVGProps<SVGSVGElement> & { title?: string; titleId?: string }>;
 
 export const LOGO_COMPONENTS = {
-  'app-variant-01': AppVariant01,
-  'app-variant-02': AppVariant02,
-  'gradient-01': Gradient01,
-  'gradient-02': Gradient02,
-  mumble: Mumble,
-  'violet-01': Violet01,
-  'violet-02': Violet02,
-  'white-01': White01,
-  'white-02': White02,
+  'app-variant-01': AppVariant01 as LogoComponent,
+  'app-variant-02': AppVariant02 as LogoComponent,
+  'gradient-01': Gradient01 as LogoComponent,
+  'gradient-02': Gradient02 as LogoComponent,
+  mumble: Mumble as LogoComponent,
+  'violet-01': Violet01 as LogoComponent,
+  'violet-02': Violet02 as LogoComponent,
+  'white-01': White01 as LogoComponent,
+  'white-02': White02 as LogoComponent,
 } as const;

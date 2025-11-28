@@ -9,16 +9,20 @@
     "clean": "rm -rf ./dist",
     "copy:styles": "cp -r ./src/styles ./dist/styles",
     "copy:tailwind": "cp ./tailwind.config.ts ./dist",
-    "build": "vite build && npm run copy:tailwind && npm run copy:styles",
+    "build:js": "tsc -p tsconfig.esm.json",
+    "build": "npm run clean && npm run build:js && npm run copy:styles",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "vitest --project=storybook",
+    "test:unit": "vitest run --project=unit",
+    "test:storybook": "vitest run --project=storybook",
+    "test:all": "npm run test:unit && npm run test:storybook",
     "check:unused": "knip",
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx && npm run type-check && npm run check:unused",
     "format": "prettier --write .",
-    "test": "vitest run",
+    "svgr:icons": "rm -rf ./src/components/icon/svg-components && svgr ./src/components/icon/svg --out-dir ./src/components/icon/svg-components",
+    "svgr:logos": "rm -rf ./src/components/logo/svg-components && svgr ./src/components/logo/logos --out-dir ./src/components/logo/svg-components",
     "coverage": "vitest run --coverage"
   },
   "release": {
@@ -37,15 +41,13 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./styles": "./dist/styles/index.css",
-    "./styles/*": "./dist/styles/*",
-    "./tailwind.config.ts": "./dist/tailwind.config.ts"
+    "./styles/*": "./dist/styles/*"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "sideEffects": [
     "dist/styles/*.css"
   ],
@@ -79,6 +81,7 @@
     "@storybook/addon-docs": "10.0.7",
     "@storybook/addon-vitest": "^10.0.7",
     "@storybook/react-vite": "10.0.7",
+    "@svgr/cli": "^8.1.0",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
@@ -105,7 +108,6 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "8.46.4",
     "vite": "7.2.2",
-    "vite-plugin-dts": "4.5.4",
     "vite-plugin-svgr": "4.5.0",
     "vitest": "4.0.8"
   }

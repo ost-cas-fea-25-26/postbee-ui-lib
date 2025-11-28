@@ -1,54 +1,57 @@
-/// <reference types="vite-plugin-svgr/client" />
-import ArrowDown from './svg/arrow-down.svg?react';
-import ArrowLeft from './svg/arrow-left.svg?react';
-import ArrowRight from './svg/arrow-right.svg?react';
-import ArrowUp from './svg/arrow-up.svg?react';
-import Calendar from './svg/calendar.svg?react';
-import Cancel from './svg/cancel.svg?react';
-import Checkmark from './svg/checkmark.svg?react';
-import Edit from './svg/edit.svg?react';
-import Eye from './svg/eye.svg?react';
-import Fullscreen from './svg/fullscreen.svg?react';
-import HeartFilled from './svg/heart-filled.svg?react';
-import Heart from './svg/heart.svg?react';
-import Location from './svg/location.svg?react';
-import LogOut from './svg/log-out.svg?react';
-import Mumble from './svg/mumble.svg?react';
-import Profile from './svg/profile.svg?react';
-import ReplyFilled from './svg/reply-filled.svg?react';
-import Reply from './svg/reply.svg?react';
-import Repost from './svg/repost.svg?react';
-import Send from './svg/send.svg?react';
-import Settings from './svg/settings.svg?react';
-import Share from './svg/share.svg?react';
-import Time from './svg/time.svg?react';
-import Upload from './svg/upload.svg?react';
+import type { FC, SVGProps } from 'react';
+
+import ArrowDown from './svg-components/ArrowDown';
+import ArrowLeft from './svg-components/ArrowLeft';
+import ArrowRight from './svg-components/ArrowRight';
+import ArrowUp from './svg-components/ArrowUp';
+import Calendar from './svg-components/Calendar';
+import Cancel from './svg-components/Cancel';
+import Checkmark from './svg-components/Checkmark';
+import Edit from './svg-components/Edit';
+import Eye from './svg-components/Eye';
+import Fullscreen from './svg-components/Fullscreen';
+import Heart from './svg-components/Heart';
+import HeartFilled from './svg-components/HeartFilled';
+import Location from './svg-components/Location';
+import LogOut from './svg-components/LogOut';
+import Mumble from './svg-components/Mumble';
+import Profile from './svg-components/Profile';
+import Reply from './svg-components/Reply';
+import ReplyFilled from './svg-components/ReplyFilled';
+import Repost from './svg-components/Repost';
+import Send from './svg-components/Send';
+import Settings from './svg-components/Settings';
+import Share from './svg-components/Share';
+import Time from './svg-components/Time';
+import Upload from './svg-components/Upload';
+
+type LogoComponent = FC<SVGProps<SVGSVGElement> & { title?: string; titleId?: string }>;
 
 export const ICON_COMPONENTS = {
-  'arrow-down': ArrowDown,
-  'arrow-left': ArrowLeft,
-  'arrow-right': ArrowRight,
-  'arrow-up': ArrowUp,
-  calendar: Calendar,
-  cancel: Cancel,
-  checkmark: Checkmark,
-  edit: Edit,
-  eye: Eye,
-  fullscreen: Fullscreen,
-  heart: Heart,
-  'heart-filled': HeartFilled,
-  location: Location,
-  'log-out': LogOut,
-  mumble: Mumble,
-  profile: Profile,
-  reply: Reply,
-  'reply-filled': ReplyFilled,
-  repost: Repost,
-  send: Send,
-  settings: Settings,
-  share: Share,
-  time: Time,
-  upload: Upload,
+  'arrow-down': ArrowDown as LogoComponent,
+  'arrow-left': ArrowLeft as LogoComponent,
+  'arrow-right': ArrowRight as LogoComponent,
+  'arrow-up': ArrowUp as LogoComponent,
+  calendar: Calendar as LogoComponent,
+  cancel: Cancel as LogoComponent,
+  checkmark: Checkmark as LogoComponent,
+  edit: Edit as LogoComponent,
+  eye: Eye as LogoComponent,
+  fullscreen: Fullscreen as LogoComponent,
+  heart: Heart as LogoComponent,
+  'heart-filled': HeartFilled as LogoComponent,
+  location: Location as LogoComponent,
+  'log-out': LogOut as LogoComponent,
+  mumble: Mumble as LogoComponent,
+  profile: Profile as LogoComponent,
+  reply: Reply as LogoComponent,
+  'reply-filled': ReplyFilled as LogoComponent,
+  repost: Repost as LogoComponent,
+  send: Send as LogoComponent,
+  settings: Settings as LogoComponent,
+  share: Share as LogoComponent,
+  time: Time as LogoComponent,
+  upload: Upload as LogoComponent,
 } as const;
 
 export const COLOR_CLASS_NAMES = {

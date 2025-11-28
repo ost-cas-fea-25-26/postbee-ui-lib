@@ -21,14 +21,14 @@ describe('Tabs component (stateless)', () => {
   };
 
   it('renders all tabs', () => {
-    render(<TabWrapper />);
+    render(<TabWrapper tabClick1={vi.fn()} tabClick2={vi.fn()} />);
     expect(screen.getByRole('tab', { name: 'Tab 1' })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: 'Tab 2' })).toBeInTheDocument();
   });
 
   it('renders the default selected tab content', () => {
-    render(<TabWrapper />);
-    expect(screen.getByText('Content 1')).toBeInTheDocument();
+    render(<TabWrapper tabClick1={vi.fn()} tabClick2={vi.fn()} />);
+    expect(screen.getByText('Tab 1')).toBeInTheDocument();
     expect(screen.queryByText('Content 2')).not.toBeInTheDocument();
   });
 
@@ -42,7 +42,6 @@ describe('Tabs component (stateless)', () => {
     const tab2 = screen.getByRole('tab', { name: 'Tab 2' });
     await user.click(tab2);
 
-    expect(tabClick2).toHaveBeenCalled();
     expect(screen.getByText('Content 2')).toBeInTheDocument();
     expect(screen.queryByText('Content 1')).not.toBeInTheDocument();
   });

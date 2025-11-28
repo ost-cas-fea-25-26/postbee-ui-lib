@@ -26,7 +26,7 @@ describe('TextButton Component', () => {
     render(<TextButton text="Click Me" variant="secondary" />);
 
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('text-secondary-400');
+    expect(button).toHaveClass('text-secondary-500');
     expect(button).not.toHaveClass('text-primary');
   });
 

@@ -2,26 +2,10 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  build: {
-    emptyOutDir: true,
-    target: 'esnext',
-    lib: {
-      entry: 'src/index.ts',
-      formats: ['es'],
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        entryFileNames: `index.js`,
-        format: 'es',
-      },
-    },
-  },
   plugins: [
     react(),
     tailwindcss(),
@@ -31,10 +15,6 @@ export default defineConfig({
         titleProp: true,
         ref: true,
       },
-    }),
-    dts({
-      tsconfigPath: 'tsconfig.build.json',
-      rollupTypes: true,
     }),
   ],
   test: {},
