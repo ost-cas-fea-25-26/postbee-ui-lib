@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.0...v1.26.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* revert build with tsc and export svgs as components ([#123](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/123)) ([302b025](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/302b025764efce71938cfe26faeb30569b0945b8))
+
 # [1.26.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.25.1...v1.26.0) (2025-11-16)
 
 
