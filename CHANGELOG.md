@@ -1,3 +1,10 @@
+## [1.26.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.2...v1.26.3) (2025-11-29)
+
+
+### Bug Fixes
+
+* add use-client to interactive components ([#129](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/issues/129)) ([67c3a12](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/67c3a1253ff3ad61e1a34e69fded4a3beda61792))
+
 ## [1.26.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.1...v1.26.2) (2025-11-29)
 
 
