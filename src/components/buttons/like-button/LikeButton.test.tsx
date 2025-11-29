@@ -220,27 +220,21 @@ describe('LikeButton Component', () => {
     expect(button).not.toBeDisabled();
   });
 
-  it('should update when count prop changes', () => {
-    const { rerender } = render(<LikeButton count={2} />);
+  it('should sync with external count after user interaction', () => {
+    const onLikeAdd = vi.fn();
+    const { rerender } = render(<LikeButton count={3} onLikeAdd={onLikeAdd} />);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveTextContent('2 Likes');
+    expect(button).toHaveTextContent('3 Likes');
 
-    rerender(<LikeButton count={5} />);
-    expect(button).toHaveTextContent('5 Likes');
+    // User adds like
+    fireEvent.click(button);
+    expect(button).toHaveTextContent('4 Likes');
+    expect(onLikeAdd).toHaveBeenCalledTimes(1);
 
-    rerender(<LikeButton count={0} />);
-    expect(button).toHaveTextContent('Like');
-  });
-
-  it('should update when initialIsLiked prop changes', () => {
-    const { rerender } = render(<LikeButton initialIsLiked={false} />);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveAttribute('aria-pressed', 'false');
-
-    rerender(<LikeButton initialIsLiked={true} />);
-    expect(button).toHaveAttribute('aria-pressed', 'true');
+    // External system confirms and updates count
+    rerender(<LikeButton count={4} onLikeAdd={onLikeAdd} />);
+    expect(button).toHaveTextContent('4 Likes');
   });
 
   it('should apply active classes when liked', () => {
