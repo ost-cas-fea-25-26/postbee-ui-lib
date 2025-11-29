@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import type { IconName } from '../../icon';
 import { ToggleButton, type ToggleButtonProps } from '../toggle-button';
@@ -22,12 +22,15 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
   const [isActive, setIsActive] = useState(count > 0 || initialIsLiked);
   const [showLikedText, setShowLikedText] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    setLikesCount(count);
-    setIsLiked(initialIsLiked);
-    setIsActive(count > 0 || initialIsLiked);
-  }, [count, initialIsLiked]);
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleClick = () => {
     if (disabled) return;
@@ -51,7 +54,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
       setDisabled(true);
       onLikeAdd?.();
 
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setShowLikedText(false);
         setDisabled(false);
       }, 2000);
