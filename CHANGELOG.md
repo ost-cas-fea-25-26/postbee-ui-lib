@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.3...v1.27.0) (2025-11-29)
+
+
+### Features
+
+* **Upload:** provide state ([8471f8f](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/8471f8f34d25d1416288bd9ed4d031c4a5f10209))
+
 ## [1.26.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.2...v1.26.3) (2025-11-29)
 
 
