@@ -12,8 +12,8 @@ interface UploadFile {
   preview?: string;
 }
 
-export const Upload = () => {
-  const [files, setFiles] = useState<UploadFile[]>([]);
+export const Upload = ({ files = [], onChange }: { files?: UploadFile[]; onChange: (files: UploadFile[]) => void }) => {
+  const [internalFiles, setInternalFiles] = useState<UploadFile[]>(files);
 
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
     noClick: true,
@@ -24,24 +24,23 @@ export const Upload = () => {
         file,
         preview: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined,
       }));
-      setFiles((prev) => [...prev, ...newFiles]);
+
+      const updated = [...internalFiles, ...newFiles];
+      setInternalFiles(updated);
+      onChange(updated);
     },
   });
 
   const removeFile = (index: number) => {
-    setFiles((prev) => {
-      const toRemove = prev[index];
-      // Revoke only the preview of the removed file
-      if (toRemove?.preview) URL.revokeObjectURL(toRemove.preview);
-      // Return the rest of the files
-      return prev.filter((_, i) => i !== index);
-    });
+    const updated = internalFiles.filter((_, i) => i !== index);
+    setInternalFiles(updated);
+    onChange(updated);
   };
 
   // Clean up previews on unmount
   useEffect(() => {
     return () => {
-      files.forEach((f) => f.preview && URL.revokeObjectURL(f.preview));
+      internalFiles.forEach((f) => f.preview && URL.revokeObjectURL(f.preview));
     };
   }, []);
 

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Upload } from './Upload';
@@ -22,11 +24,21 @@ const meta: Meta<typeof Upload> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof Upload>;
+
+const UploadWrapper = (args: unknown) => {
+  const [files, setFiles] = useState([]);
+
+  // @ts-expect-error Story
+  return <Upload {...args} files={files} onChange={setFiles} />;
+};
 
 // Default empty Upload
 export const Default: Story = {
   name: 'Default',
+  // @ts-expect-error Story
+  render: (args) => <UploadWrapper {...args} />,
   args: {},
   parameters: {
     docs: {
