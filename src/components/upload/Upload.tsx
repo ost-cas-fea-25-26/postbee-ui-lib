@@ -12,20 +12,29 @@ interface UploadFile {
   preview?: string;
 }
 
-export const Upload = ({ files = [], onChange }: { files?: UploadFile[]; onChange: (files: UploadFile[]) => void }) => {
+export const Upload = ({
+  files = [],
+  multiple = false,
+  onChange,
+}: {
+  files?: UploadFile[];
+  multiple?: boolean;
+  onChange: (files: UploadFile[]) => void;
+}) => {
   const [internalFiles, setInternalFiles] = useState<UploadFile[]>(files);
 
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
     noClick: true,
     noKeyboard: true,
-    multiple: true,
+    multiple,
     onDrop: (acceptedFiles) => {
       const newFiles = acceptedFiles.map((file) => ({
         file,
         preview: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined,
       }));
 
-      const updated = [...internalFiles, ...newFiles];
+      const updated = multiple ? [...newFiles] : [newFiles[0]];
+
       setInternalFiles(updated);
       onChange(updated);
     },
