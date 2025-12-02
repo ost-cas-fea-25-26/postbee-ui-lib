@@ -22,16 +22,18 @@ type Story = StoryObj<typeof Tabs>;
 
 export const Default: Story = {
   render: () => {
-    const [activeTab, setActiveTab] = useState('Deine Mumbles');
+    const [activeTab, setActiveTab] = useState('mumbles');
 
     const tabs: TabItem[] = [
       {
         text: 'Deine Mumbles',
+        value: 'mumbles',
         content: <p>Content for: Deine Mumbles</p>,
         onClick: () => console.log('Tab 1 clicked'),
       },
       {
         text: 'Deine Likes',
+        value: 'likes',
         content: <p>Content for: Deine Likes</p>,
         onClick: () => console.log('Tab 2 clicked'),
       },

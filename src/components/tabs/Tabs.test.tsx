@@ -13,8 +13,8 @@ describe('Tabs component (stateless)', () => {
     const [activeTab, setActiveTab] = React.useState(initial);
 
     const tabs: TabItem[] = [
-      { text: 'Tab 1', content: <div>Content 1</div>, onClick: tabClick1 },
-      { text: 'Tab 2', content: <div>Content 2</div>, onClick: tabClick2 },
+      { text: 'Tab 1', value: 'tab1', content: <div>Content 1</div>, onClick: tabClick1 },
+      { text: 'Tab 2', value: 'tab2', content: <div>Content 2</div>, onClick: tabClick2 },
     ];
 
     return <Tabs tabs={tabs} value={activeTab} onValueChange={setActiveTab} />;

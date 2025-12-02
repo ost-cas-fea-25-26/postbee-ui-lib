@@ -46,7 +46,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
           {src ? (
             <RadixAvatar.Image src={src} alt={alt} className="h-full w-full object-cover" />
           ) : (
-            <RadixAvatar.Fallback className="flex h-full w-full items-center justify-center font-medium" delayMs={500}>
+            <RadixAvatar.Fallback className="flex h-full w-full items-center justify-center font-medium">
               {fallback || ''}
             </RadixAvatar.Fallback>
           )}

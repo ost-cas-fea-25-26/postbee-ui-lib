@@ -6,8 +6,9 @@ import * as TabsPrimitive from '@radix-ui/react-tabs';
 
 export type TabItem = {
   text: string;
-  content: React.ReactNode;
-  onClick: () => void;
+  value: string;
+  content?: React.ReactNode;
+  onClick?: () => void;
 };
 
 export type TabsProps = {
@@ -19,15 +20,11 @@ export type TabsProps = {
 export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
   const handleValueChange = (newValue: string) => {
     onValueChange(newValue);
-    const tab = tabs.find((t) => t.text === newValue);
+    const tab = tabs.find((t) => t.value === newValue);
     if (tab) {
-      tab.onClick();
+      tab.onClick?.();
     }
   };
-
-  function removeAllSpaces(input: string): string {
-    return input.replace(/\s+/g, '');
-  }
 
   return (
     <TabsPrimitive.Root value={value} onValueChange={handleValueChange} className="w-full">
@@ -35,7 +32,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
         {tabs.map((tab) => (
           <TabsPrimitive.Trigger
             key={tab.text}
-            value={removeAllSpaces(tab.text)}
+            value={tab.value}
             aria-label={tab.text}
             className="data-[state=active]:text-primary-600 transition duration-300 ease-in-out pb-label-lg hover:text-secondary-900 h-10 cursor-pointer rounded-md px-3 py-1 text-lg focus:outline-none data-[state=active]:bg-white"
           >
@@ -44,16 +41,13 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
         ))}
       </TabsPrimitive.List>
 
-      {tabs.map((tab) => (
-        <TabsPrimitive.Content
-          key={tab.text}
-          value={removeAllSpaces(tab.text)}
-          aria-label={tab.text}
-          className="mt-3 rounded-md bg-white p-2"
-        >
-          {tab.content}
-        </TabsPrimitive.Content>
-      ))}
+      {tabs
+        .filter((tab) => tab.content !== undefined && tab.content !== null)
+        .map((tab) => (
+          <TabsPrimitive.Content key={tab.text} value={tab.value} aria-label={tab.text} className="p-2">
+            {tab.content}
+          </TabsPrimitive.Content>
+        ))}
     </TabsPrimitive.Root>
   );
 };
