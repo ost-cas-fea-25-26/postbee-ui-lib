@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.27.0...v1.28.0) (2025-12-02)
+
+
+### Features
+
+* release ([85c28ee](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/85c28ee09650f7f7f19c7d1aa227b1df4fc76daa))
+
 # [1.27.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.26.3...v1.27.0) (2025-11-29)
 
 
