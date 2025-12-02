@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.28.0...v1.29.0) (2025-12-02)
+
+
+### Features
+
+* **Upload:** allow multiple/single mode ([00deb9e](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/00deb9e6186d2f2aeb64a5e92e999cd52828f57c))
+
 # [1.28.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.27.0...v1.28.0) (2025-12-02)
 
 
