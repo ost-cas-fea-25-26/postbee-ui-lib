@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.0...v1.29.1) (2025-12-03)
+
+
+### Bug Fixes
+
+* **Dialog:** add opacity to the dialog overlay ([ddd6d42](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/ddd6d42b622e44c9b95090d365d834485822eea0))
+
 # [1.29.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.28.0...v1.29.0) (2025-12-02)
 
 
