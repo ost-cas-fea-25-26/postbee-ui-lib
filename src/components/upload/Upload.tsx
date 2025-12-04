@@ -7,7 +7,7 @@ import { useDropzone } from 'react-dropzone';
 import { Button } from '../buttons';
 import { Icon } from '../icon';
 
-interface UploadFile {
+export interface UploadFile {
   file: File;
   preview?: string;
 }
