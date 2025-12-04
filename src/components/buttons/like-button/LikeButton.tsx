@@ -34,6 +34,12 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
     };
   }, []);
 
+  useEffect(() => {
+    setLikesCount(count);
+    setIsLiked(initialIsLiked);
+    setIsActive(count > 0 || initialIsLiked);
+  }, [count, initialIsLiked]);
+
   const handleClick = () => {
     if (disabled) return;
 
