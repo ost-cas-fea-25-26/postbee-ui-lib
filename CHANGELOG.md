@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.2...v1.30.0) (2025-12-04)
+
+
+### Features
+
+* **Upload:** export type ([fd515af](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/fd515af1d1e36159bb360c4841ee7315c0400a90))
+
 ## [1.29.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.1...v1.29.2) (2025-12-04)
 
 
