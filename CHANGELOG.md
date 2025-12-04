@@ -1,3 +1,10 @@
+## [1.29.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.1...v1.29.2) (2025-12-04)
+
+
+### Bug Fixes
+
+* **LikeButton:** re-add useEffect for listening of the changes props ([3bad791](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/3bad791c19308042beeaab470210af0af8127586))
+
 ## [1.29.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.0...v1.29.1) (2025-12-03)
 
 
