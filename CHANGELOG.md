@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.0...v1.31.1) (2025-12-05)
+
+
+### Bug Fixes
+
+* **Avatar:** fix border color ([998dbbd](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/998dbbd61dc87e854cf089319a1fac2ad483bd04))
+
 # [1.31.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.30.0...v1.31.0) (2025-12-05)
 
 
