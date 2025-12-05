@@ -1,3 +1,11 @@
+## [1.31.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.1...v1.31.2) (2025-12-05)
+
+
+### Bug Fixes
+
+* **Avatar:** fix edit button size ([693f200](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/693f200ba70562bbc28883384856d05d43ccd590))
+* **Avatar:** fix sizes by adding outline instead of borders ([eca47c7](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/eca47c7c1e5c9709da732bd4eaf8283d8fce4f89))
+
 ## [1.31.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.0...v1.31.1) (2025-12-05)
 
 
