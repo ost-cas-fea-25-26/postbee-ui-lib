@@ -38,7 +38,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
         <RadixAvatar.Root
           ref={ref}
           className={clsx(
-            'bg-primary-200 text-secondary border-secondary-50 border-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
+            'bg-primary-200 text-secondary border-secondary-100 border-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
             sizeClasses,
           )}
           {...props}
