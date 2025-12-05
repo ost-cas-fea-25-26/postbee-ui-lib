@@ -23,7 +23,7 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
   const maxWidth = width === 'sm' ? 'md:max-w-[465px]' : 'md:max-w-[494px]';
 
   return (
-    <DialogPrimitive.Root open={open} onOpenChange={(v) => !v && onClose()}>
+    <DialogPrimitive.Root open={open} onOpenChange={(v) => !v && onClose?.()}>
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className="bg-primary-300 opacity-50 fixed inset-0" />
 
