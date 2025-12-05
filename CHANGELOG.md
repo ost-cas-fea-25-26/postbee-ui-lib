@@ -1,3 +1,10 @@
+## [1.31.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.2...v1.31.3) (2025-12-05)
+
+
+### Bug Fixes
+
+* **Dialog:** check for undefined on calling onClose ([031b03b](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/031b03b3b23bba595910a277a13d93edb758614c))
+
 ## [1.31.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.1...v1.31.2) (2025-12-05)
 
 
