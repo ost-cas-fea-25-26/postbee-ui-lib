@@ -1,3 +1,10 @@
+# [1.31.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.30.0...v1.31.0) (2025-12-05)
+
+
+### Features
+
+* **Dialog:** set onClose & onSubmit optional ([8d5ccc6](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/8d5ccc6e3a26bf4e3aa3d7ec71d65bc605f55deb))
+
 # [1.30.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.29.2...v1.30.0) (2025-12-04)
 
 
