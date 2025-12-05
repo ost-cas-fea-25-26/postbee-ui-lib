@@ -29,8 +29,8 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
     const editableButtonSizeClasses = {
       sm: 'w-8 h-8 right-0 bottom-0',
       md: 'w-8 h-8 right-2 bottom-2',
-      lg: 'right-3 bottom-4',
-      xl: 'bottom-4 right-4',
+      lg: 'right-3 bottom-3',
+      xl: 'w-12 h-12 bottom-3 right-3',
     }[size];
 
     return (
