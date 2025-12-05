@@ -13,8 +13,8 @@ export interface DialogProps {
   title: string;
   description?: string;
   width?: 'sm' | 'md';
-  onClose: () => void;
-  onSubmit: () => void;
+  onClose?: () => void;
+  onSubmit?: () => void;
   children: ReactNode;
   actions?: ReactNode;
 }
