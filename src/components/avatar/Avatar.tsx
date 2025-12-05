@@ -20,7 +20,7 @@ export interface AvatarProps extends React.ComponentPropsWithoutRef<typeof Radix
 export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
   ({ src, alt, fallback, size = 'md', isEditable = false, onEdit, className, ...props }, ref) => {
     const sizeClasses = {
-      sm: 'w-10 h-10 text-sm border-none', // 40x40
+      sm: 'w-10 h-10 text-sm outline-none', // 40x40
       md: 'w-16 h-16 text-base', // 64x64
       lg: 'w-24 h-24 text-lg', // 96x96
       xl: 'w-40 h-40 text-xl', // 160x160
@@ -38,7 +38,7 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
         <RadixAvatar.Root
           ref={ref}
           className={clsx(
-            'bg-primary-200 text-secondary border-secondary-100 border-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
+            'bg-primary-200 text-secondary outline-secondary-100 outline-6 relative flex select-none items-center justify-center overflow-hidden rounded-full',
             sizeClasses,
           )}
           {...props}
