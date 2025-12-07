@@ -25,7 +25,7 @@ export const Dialog = ({ open, title, description, width = 'md', onClose, onSubm
   return (
     <DialogPrimitive.Root open={open} onOpenChange={(v) => !v && onClose?.()}>
       <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay className="bg-primary-300 opacity-50 fixed inset-0" />
+        <DialogPrimitive.Overlay className="bg-primary-300 opacity-50 z-50 fixed inset-0" />
 
         <div className="fixed inset-0 z-50 grid min-h-full place-items-center">
           <DialogPrimitive.Content
