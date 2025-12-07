@@ -1,3 +1,10 @@
+## [1.31.4](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.3...v1.31.4) (2025-12-07)
+
+
+### Bug Fixes
+
+* **Dialog:** add z-index also for the overlay ([b1355a7](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/b1355a768bfa3c22058763a3a3eec66999353ce1))
+
 ## [1.31.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.2...v1.31.3) (2025-12-05)
 
 
