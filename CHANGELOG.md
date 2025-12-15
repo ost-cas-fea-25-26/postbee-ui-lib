@@ -1,3 +1,10 @@
+## [1.32.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.0...v1.32.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* add own animation theme definition ([5421ad7](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/5421ad7aa95688efe1af85d9a525499f56eab01a))
+
 # [1.32.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.4...v1.32.0) (2025-12-15)
 
 
