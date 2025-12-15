@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tailwindcss/utilities';
+@import 'tailwindcss/animations';
 
 /* Fonts */
 @import '@fontsource/poppins/500.css'; /* medium */

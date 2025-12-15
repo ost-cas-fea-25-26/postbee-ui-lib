@@ -16,6 +16,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   fullWidth?: boolean;
   icon?: IconName;
   text?: string;
+  loading?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -26,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   icon,
   text,
+  loading = false,
   className,
   ...props
 }) => {
@@ -61,9 +63,9 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      disabled={disabled}
+      disabled={disabled || loading}
       className={clsx(
-        'inline-flex cursor-pointer items-center justify-center font-semibold leading-none disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex cursor-pointer items-center justify-center font-semibold leading-none disabled:pointer-events-none disabled:opacity-70',
         'transition duration-300 ease-in-out',
         isIconOnly ? 'rounded-full' : 'rounded-md',
         variantClasses[variant],
@@ -72,10 +74,19 @@ export const Button: React.FC<ButtonProps> = ({
         className,
       )}
       aria-label={isIconOnly ? `${icon} icon` : undefined}
+      aria-busy={loading}
       {...props}
     >
-      {text ? text : children}
-      {icon && <Icon icon={icon} size={16} className={clsx({ 'ml-xs': !isIconOnly })} />}
+      {loading && (
+        <div role="status" className="absolute">
+          <div className="h-4 w-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+          <span className="sr-only">Loading...</span>
+        </div>
+      )}
+      <span className={loading ? 'invisible' : ''}>
+        {text ? text : children}
+        {icon && <Icon icon={icon} size={16} className={clsx({ 'ml-xs': !isIconOnly })} />}
+      </span>
     </button>
   );
 };
