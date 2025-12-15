@@ -14,6 +14,7 @@ export interface HeaderButtonProps extends React.ButtonHTMLAttributes<HTMLButton
   iconAnimation?: IconAnimation;
   text?: string;
   size?: 'sm' | 'md' | 'lg';
+  loading?: boolean;
 }
 
 export const HeaderButton: React.FC<HeaderButtonProps> = ({
@@ -23,6 +24,8 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
   iconAnimation,
   children,
   className,
+  loading = false,
+  disabled = false,
   ...props
 }) => {
   const iconProps: Partial<Omit<IconProps, 'icon'>> = {
@@ -48,32 +51,45 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
 
   const content = (
     <>
-      {icon && (
-        <Icon
-          icon={icon}
-          {...iconProps}
-          className={clsx({
-            'mt-1': text || children,
-            'group-hover:rotate-90 duration-350 ease-in-out transition-transform': iconAnimation === 'rotate',
-          })}
-        />
+      {loading && (
+        <div role="status" className="absolute">
+          <div
+            className="h-4 w-4 border-2 border-current border-t-transparent rounded-full animate-spin"
+            style={{ borderColor: 'white', borderTopColor: 'transparent' }}
+          />
+          <span className="sr-only">Loading...</span>
+        </div>
       )}
-      {children}
-      {text && <span className="mt-0.5 block text-center text-white">{text}</span>}
+      <div className={clsx('flex flex-col items-center', loading && 'invisible')}>
+        {icon && (
+          <Icon
+            icon={icon}
+            {...iconProps}
+            className={clsx({
+              'mt-1': text || children,
+              'group-hover:rotate-90 duration-350 ease-in-out transition-transform': iconAnimation === 'rotate',
+            })}
+          />
+        )}
+        {children}
+        {text && <span className="mt-0.5 block text-center text-white">{text}</span>}
+      </div>
     </>
   );
 
   return (
     <button
       type="button"
+      disabled={disabled || loading}
       className={clsx(
-        'bg-primary hover:bg-primary-hover flex flex-col group',
+        'relative bg-primary hover:bg-primary-hover flex flex-col group',
         'cursor-pointer items-center justify-center rounded-md px-2',
-        'transition duration-300 ease-in-out group',
+        'transition duration-300 ease-in-out group disabled:pointer-events-none disabled:opacity-70',
         sizeClass,
         className,
       )}
       aria-label={isIconOnly ? `${icon} icon` : undefined}
+      aria-busy={loading}
       {...props}
     >
       {content}
