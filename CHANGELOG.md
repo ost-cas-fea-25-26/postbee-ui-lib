@@ -1,3 +1,10 @@
+## [1.32.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.1...v1.32.2) (2025-12-15)
+
+
+### Bug Fixes
+
+* **Button:** fix icon not be on the same line as the text ([f73be64](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/f73be6422f33dc9cd8205d7ec553e66f57421d0d))
+
 ## [1.32.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.0...v1.32.1) (2025-12-15)
 
 
