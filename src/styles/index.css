@@ -1,5 +1,6 @@
 @import './base.css';
 @import './components.css';
+@import './theme/animations.css';
 @import './theme/breakpoint.css';
 @import './theme/colors.css';
 @import './theme/radius.css';
