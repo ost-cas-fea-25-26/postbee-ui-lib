@@ -1,3 +1,11 @@
+# [1.32.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.4...v1.32.0) (2025-12-15)
+
+
+### Features
+
+* **Button:** add loading state with spinner ([784cd50](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/784cd5093ab43adf994f185be1f8ef7bd941261d))
+* **HeaderButton:** add loading state with spinner ([4cd5dee](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/4cd5dee185f4d3b25d1b7880a0393d34701876e3))
+
 ## [1.31.4](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.31.3...v1.31.4) (2025-12-07)
 
 
