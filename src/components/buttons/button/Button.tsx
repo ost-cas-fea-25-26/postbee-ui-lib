@@ -83,7 +83,7 @@ export const Button: React.FC<ButtonProps> = ({
           <span className="sr-only">Loading...</span>
         </div>
       )}
-      <span className={loading ? 'invisible' : ''}>
+      <span className={clsx({ invisible: loading }, 'flex items-center')}>
         {text ? text : children}
         {icon && <Icon icon={icon} size={16} className={clsx({ 'ml-xs': !isIconOnly })} />}
       </span>
