@@ -51,27 +51,32 @@ export const HeaderButton: React.FC<HeaderButtonProps> = ({
 
   const content = (
     <>
-      {loading && (
-        <div role="status" className="absolute">
-          <div
-            className="h-4 w-4 border-2 border-current border-t-transparent rounded-full animate-spin"
-            style={{ borderColor: 'white', borderTopColor: 'transparent' }}
-          />
-          <span className="sr-only">Loading...</span>
-        </div>
-      )}
-      <div className={clsx('flex flex-col items-center', loading && 'invisible')}>
-        {icon && (
-          <Icon
-            icon={icon}
-            {...iconProps}
-            className={clsx({
-              'mt-1': text || children,
-              'group-hover:rotate-90 duration-350 ease-in-out transition-transform': iconAnimation === 'rotate',
-            })}
-          />
+      <div className={clsx('flex flex-col items-center')}>
+        {(icon || loading) && (
+          <div>
+            {loading ? (
+              <div role="status" aria-live="polite" aria-label="Loading">
+                <div
+                  className={clsx('h-4 w-4 border-2 border-current border-t-transparent rounded-full animate-spin', {
+                    'mt-1': text,
+                  })}
+                  style={{ borderColor: 'white', borderTopColor: 'transparent' }}
+                />
+                <span className="sr-only">Loading...</span>
+              </div>
+            ) : (
+              <Icon
+                icon={icon as IconName}
+                {...iconProps}
+                className={clsx({
+                  'mt-1': text || children,
+                  'group-hover:rotate-90 duration-350 ease-in-out transition-transform': iconAnimation === 'rotate',
+                })}
+              />
+            )}
+          </div>
         )}
-        {children}
+        {!loading && children}
         {text && <span className="mt-0.5 block text-center text-white">{text}</span>}
       </div>
     </>
