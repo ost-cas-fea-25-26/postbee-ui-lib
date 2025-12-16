@@ -1,3 +1,10 @@
+## [1.32.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.2...v1.32.3) (2025-12-16)
+
+
+### Bug Fixes
+
+* **HeaderButton:** do not hide the text on loading ([22de3fd](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/22de3fd6207e01707add2fe0e2cd8dce34cfe911))
+
 ## [1.32.2](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.1...v1.32.2) (2025-12-15)
 
 
