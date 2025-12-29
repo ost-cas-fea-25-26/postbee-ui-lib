@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.3...v1.33.0) (2025-12-29)
+
+
+### Features
+
+* add shadow tailwind definitions ([9dde221](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/9dde221f9d7ce4cefcca52134ce5599aeae12059))
+
 ## [1.32.3](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.2...v1.32.3) (2025-12-16)
 
 
