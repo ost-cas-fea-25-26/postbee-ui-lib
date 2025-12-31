@@ -86,7 +86,7 @@ jobs:
       - name: List dist content
         run: ls -la dist
       - name: Upload built library
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: library-build
           path: dist
@@ -105,7 +105,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Download built library
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: library-build
           path: dist
@@ -131,7 +131,7 @@ jobs:
       - name: Run coverage
         run: npm run coverage
       - name: Upload coverage artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: coverage-report
           path: coverage
