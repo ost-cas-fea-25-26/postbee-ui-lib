@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.33.0...v1.34.0) (2026-01-05)
+
+
+### Features
+
+* **breakpoints:** add xs breakpoint ([0df4721](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/0df4721ae81fd1fd4be0b56897b1a3d25a0f33d8))
+
 # [1.33.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.32.3...v1.33.0) (2025-12-29)
 
 
