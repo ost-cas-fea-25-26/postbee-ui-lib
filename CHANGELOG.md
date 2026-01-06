@@ -1,3 +1,10 @@
+## [1.34.1](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.34.0...v1.34.1) (2026-01-06)
+
+
+### Bug Fixes
+
+* **Tabs:** reset aria-controls when no content is given ([2d1c17e](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/commit/2d1c17e74788cc39d0e695d742bf7768bf933f30))
+
 # [1.34.0](https://github.com/ost-cas-fea-25-26/postbee-ui-lib/compare/v1.33.0...v1.34.0) (2026-01-05)
 
 
