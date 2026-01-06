@@ -34,6 +34,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, value, onValueChange }) => {
             key={tab.text}
             value={tab.value}
             aria-label={tab.text}
+            {...(!tab.content ? { 'aria-controls': undefined } : {})}
             className="data-[state=active]:text-primary-600 transition duration-300 ease-in-out pb-label-lg hover:text-secondary-900 h-10 cursor-pointer rounded-md px-3 py-1 text-lg focus:outline-none data-[state=active]:bg-white"
           >
             {tab.text}
