@@ -87,7 +87,7 @@
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
-    "@vitejs/plugin-react": "5.1.1",
+    "@vitejs/plugin-react": "5.2.0",
     "@vitest/browser": "4.0.14",
     "@vitest/browser-playwright": "4.0.14",
     "@vitest/coverage-v8": "4.0.14",
